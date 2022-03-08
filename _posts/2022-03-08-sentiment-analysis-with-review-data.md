@@ -2,7 +2,7 @@
 layout: post
 title: "Sentiment analysis"
 subtitle: "Applying sentiment analysis with review data."
-background: '/img/posts/01.jpg'
+background: '/img/posts/sentiment-analysis-review-data/picture_sentiement_analyis.jpeg'
 ---
 
 Sentiment analysis with Amazon reviews
@@ -115,7 +115,7 @@ Starwar_newHope_starrating <- as.numeric(unlist(Starwars_newHope$review_star))
 ggplot() + aes(Starwar_newHope_starrating)+ geom_histogram(binwidth=1, colour="blue", fill="blue")
 ```
 
-![](First-post_data-science-blog_07_03_2022_files/figure-gfm/mean%20star%20rating-1.png)<!-- -->
+![mean star rating-1](/img/posts/sentiment-analysis-review-data/mean star rating-1.png)<!-- -->
 
 ``` r
 # The mean rating out of 5 possible stars
@@ -161,7 +161,7 @@ Review_Starwars_newHope %>%
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-![](First-post_data-science-blog_07_03_2022_files/figure-gfm/sentiment%20analysis-1.png)<!-- -->
+![sentiment analysis-1](/img/posts/sentiment-analysis-review-data/sentiment analysis-1.png)<!-- -->
 
 There is only one negative word occurring more than \>4 times. Other than that the sentiment is dominated by positive words like ‘love’ or ‘excellent’.
 
@@ -176,4 +176,4 @@ word.freq.table<- Review_Starwars_newHope %>%
                  colors = brewer.pal(8, "Dark2")))
 ```
 
-![](First-post_data-science-blog_07_03_2022_files/figure-gfm/wordcloud-1.png)<!-- -->
+![wordcloud-1](/img/posts/sentiment-analysis-review-data/wordcloud-1.png)<!-- -->
