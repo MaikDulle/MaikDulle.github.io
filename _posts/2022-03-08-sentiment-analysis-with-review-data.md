@@ -8,12 +8,11 @@ background: '/img/posts/sentiment-analysis-review-data/picture_sentiement_analyi
 Sentiment analysis with Amazon reviews
 ================
 
-In this little tutorial I will show you how to gahter review data from Amazon and how to implement a simple sentiment analysis using the BING lexicon. The code for scraping data is a modified rewrite (I included the data as another variable) from Martin Chan (<https://martinctc.github.io/blog/>)
+In this little tutorial I will show you how to gahter review data from Amazon and how to implement a simple sentiment analysis using the BING lexicon. The code for scraping data is a modified rewrite (I included the date as another variable) from Martin Chan (<https://martinctc.github.io/blog/>)
 
 ## Note: Use at your own risk. Be ethical about user data.
 
 ### Required libraries
-
 
 ``` r
 library(tidyverse)
@@ -26,7 +25,6 @@ library(rvest)
 ```
 
 ### Scraping function
-
 
 ``` r
 scrape_amazon <- function(ASIN, page_num){
