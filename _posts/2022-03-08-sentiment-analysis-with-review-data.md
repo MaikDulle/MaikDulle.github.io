@@ -14,6 +14,7 @@ In this little tutorial I will show you how to gahter review data from Amazon an
 
 ### Required libraries
 
+
 ``` r
 library(tidyverse)
 library(dplyr)
@@ -25,6 +26,7 @@ library(rvest)
 ```
 
 ### Scraping function
+
 
 ``` r
 scrape_amazon <- function(ASIN, page_num){
