@@ -111,15 +111,15 @@ Starwars_newHope<- dplyr::bind_rows(output_list)
 ``` r
 Starwars_newHope<- Starwars_newHope %>%
   mutate_at("review_star", str_replace, " out of 5 stars", "")
-Starwar_newHope_starrating <- as.numeric(unlist(Starwars_newHope$review_star))
-ggplot() + aes(Starwar_newHope_starrating)+ geom_histogram(binwidth=1, colour="blue", fill="blue")
+Starwars_newHope_starrating <- as.numeric(unlist(Starwars_newHope$review_star))
+ggplot() + aes(Starwars_newHope_starrating)+ geom_histogram(binwidth=1, colour="blue", fill="blue")
 ```
 
 ![mean star rating-1](/img/posts/sentiment-analysis-review-data/mean star rating-1.png)<!-- -->
 
 ``` r
 # The mean rating out of 5 possible stars
-mean(Starwar_newHope_starrating, na.rm=TRUE)
+mean(Starwars_newHope_starrating, na.rm=TRUE)
 ```
 
     ## [1] 4.66
