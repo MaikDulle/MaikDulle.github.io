@@ -12,7 +12,7 @@ In this little tutorial I will show you how to gahter review data from Amazon an
 
 ## Note: Use at your own risk. Be ethical about user data.
 
-### required libraries
+### Required libraries
 
 ``` r
 library(tidyverse)
@@ -24,7 +24,7 @@ library(wordcloud)
 library(rvest)
 ```
 
-### scraping function
+### Scraping function
 
 ``` r
 scrape_amazon <- function(ASIN, page_num){
@@ -126,7 +126,7 @@ mean(Starwars_newHope_starrating, na.rm=TRUE)
 
 In general the movie was perceived very positively and viewers gave the movie mostly 5 out of 5 stars (mean = 4.66)
 
-### data prep for sentiment analysis
+### Data prep for sentiment analysis
 
 Data preparation includes removing stopword, remove spaces, numbers, punctuation etc. (tm package), tokenization
 
@@ -165,7 +165,7 @@ Review_Starwars_newHope %>%
 
 There is only one negative word occurring more than \>4 times. Other than that the sentiment is dominated by positive words like ‘love’ or ‘excellent’.
 
-### creating a wordcloud with the most often used words
+### Creating a wordcloud with the most often used words
 
 ``` r
 word.freq.table<- Review_Starwars_newHope %>%
