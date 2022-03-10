@@ -77,6 +77,9 @@ we want to scrape. In this example just set the number to 15.
 ASIN <- "B00VIZDW3S"
 page_range <- 1:15
 ```
+
+![ASIN_Amazon](/img/posts/sentiment-analysis-review-data/ASIN_Amazon.JPG)<!-- -->
+
 <br>
 
 ### Scrape the actual data

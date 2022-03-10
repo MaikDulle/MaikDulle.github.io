@@ -15,9 +15,11 @@ Tweets) on the two Social media networks (SMNs) Twitter and Instagram.
 More specifically I focussed on users’ privacy associations. I evaluated
 the UGC with the help of two topic models (LDAvis package in R).
 
-A more detailed description of the procedure: https://ldavis.cpsievert.me/reviews/reviews.html
+A very helpful description of the modeling process can be found here: https://ldavis.cpsievert.me/reviews/reviews.html
 
-Here I present the interactive results of the LDA models for Twitter
+After modeling the html-doc was created via pyLDAvis.
+
+Here I solely present the interactive results of the LDA models for Twitter
 and Instagram.
 
 Note: Be ethical about user data.
@@ -41,18 +43,17 @@ library(rjson)
 
 #### LDA topic model Instagram
 
-<p align="center">
-    <iframe id = 'lda_insta' src="/img/posts/LDA-interactive/Insta_LDA_model2.html"
-        sandbox="allow-same-origin allow-scripts"
-        width="1210"
-        height="800"
-        scrolling='no'
-        seamless
-        frameborder="0"
-        style="text-align: center"
-        >
-    </iframe>
- </p>
+
+<iframe id = 'lda_insta' src="/img/posts/LDA-interactive/Insta_LDA_model2.html"
+    sandbox="allow-same-origin allow-scripts"
+    width="1210"
+    height="800"
+    scrolling='no'
+    seamless
+    frameborder="0"
+    >
+ </iframe>
+
 
 
 <br>
