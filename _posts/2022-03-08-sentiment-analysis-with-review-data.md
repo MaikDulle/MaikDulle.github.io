@@ -142,6 +142,7 @@ Review_Starwars_newHope <- Review_Starwars_newHope %>%
   anti_join(tidytext::stop_words, by = "word")
 ```
 <br>
+
 ### Sentiment analysis using the bing lexicon
 
 ``` r
@@ -164,7 +165,9 @@ Review_Starwars_newHope %>%
 ![sentiment analysis-1](/img/posts/sentiment-analysis-review-data/sentiment analysis-1.png)<!-- -->
 
 There is only one negative word occurring more than \>4 times. Other than that the sentiment is dominated by positive words like ‘love’ or ‘excellent’.
+
 <br>
+
 ### Creating a wordcloud with the most often used words
 
 ``` r
