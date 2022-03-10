@@ -45,8 +45,9 @@ library(rjson)
     sandbox="allow-same-origin allow-scripts"
     width="100%"
     height="800"
+    scrolling='no'
     seamless
-    style="zoom: 0.75"
+    style="zoom: 0.55"
     >
 </iframe>
 
