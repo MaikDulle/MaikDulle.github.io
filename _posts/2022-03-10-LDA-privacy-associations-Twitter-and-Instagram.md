@@ -39,7 +39,7 @@ library(rjson)
 
 #### LDA topic model Instagram
 
-<iframe scr='/img/posts/LDA-interactive/Insta_LDA_model2.html' heigth='800px' width='100%'></iframe>
+{% include Insta_LDA_model2 %}
 
 <br>
 
