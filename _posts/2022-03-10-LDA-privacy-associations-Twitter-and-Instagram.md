@@ -46,7 +46,7 @@ library(rjson)
     width="100%"
     height="800"
     seamless
-    style="-webkit-transform:scale(0.5);-moz-transform-scale(0.5);"
+    style="zoom: 0.75"
     >
 </iframe>
 
