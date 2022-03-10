@@ -62,7 +62,6 @@ scrape_amazon <- function(ASIN, page_num){
 ```
 
 ### Define ASIN and number of pages
-
 Since I am a big StarWars fan, I want to take a look at the reviews of
 the movie “a new hope” The movie got more than 1.000 reviews. But first
 you have to specify the ASIN. Its the Amazon Identification number and
@@ -75,7 +74,6 @@ page_range <- 1:15
 ```
 
 ### Scrape the actual data
-
 In the next step we scrape the reviews from the pages 1-15. The code
 does include a break-system to avoid bot detection
 
@@ -99,13 +97,13 @@ lapply(page_range, function(i){
   scrape_amazon(ASIN = ASIN, page_num = j) 
 }) -> output_list
 ```
-
+  
 ### Transform data into a dataframe
 
 ``` r
 Starwars_newHope<- dplyr::bind_rows(output_list)
 ```
-
+  
 ### Calculate/visualize the (mean) star rating
 
 ``` r
