@@ -43,8 +43,8 @@ library(rjson)
 
 <iframe src="/img/posts/LDA-interactive/Insta_LDA_model2.html"
     sandbox="allow-same-origin allow-scripts"
-    width="680"
-    height="400"
+    width="900"
+    height="600"
     seamless>
 </iframe>
 
