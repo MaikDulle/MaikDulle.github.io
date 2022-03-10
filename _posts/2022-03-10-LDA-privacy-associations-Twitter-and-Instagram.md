@@ -47,12 +47,10 @@ library(rjson)
     height="100%"
     scrolling ='no'
     frameborder="no" 
-    framespacing="0"
     seamless = 'seamless'
     >
 </iframe>
 
 <br>
-
 
 #### LDA topic model Twitter
