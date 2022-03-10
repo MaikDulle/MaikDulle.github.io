@@ -134,6 +134,8 @@ mean(Starwars_newHope_starrating, na.rm=TRUE)
 
 In general the movie was perceived very positively and viewers gave the movie mostly 5 out of 5 stars (mean = 4.66)
 
+<br>
+
 ### Data prep for sentiment analysis
 
 Data preparation includes removing stopword, remove spaces, numbers, punctuation etc. (tm package), tokenization
