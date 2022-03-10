@@ -39,7 +39,7 @@ library(rjson)
 
 #### LDA topic model Instagram
 
-<iframe src="/img/posts\LDA-interactive/Insta_LDA_model2.html"
+<iframe src="/img/posts/LDA-interactive/Insta_LDA_model2.html"
     sandbox="allow-same-origin allow-scripts"
     width="100%"
     height="800"
