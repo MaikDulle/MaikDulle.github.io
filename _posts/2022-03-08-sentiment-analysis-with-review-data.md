@@ -10,7 +10,9 @@ Sentiment analysis with Amazon reviews
 
 In this little tutorial I will show you how to gahter review data from Amazon and how to implement a simple sentiment analysis using the BING lexicon. The code for scraping data is a modified rewrite (I included the date as another variable) from Martin Chan (<https://martinctc.github.io/blog/>)
 
-## Note: Use at your own risk. Be ethical about user data. <br>
+## Note: Use at your own risk. Be ethical about user data. 
+
+<br>
 
 ### Required libraries
 
@@ -139,7 +141,7 @@ Review_Starwars_newHope <- Review_Starwars_newHope %>%
   unnest_tokens(output = "word", input = "review_text")%>%
   anti_join(tidytext::stop_words, by = "word")
 ```
-
+<br>
 ### Sentiment analysis using the bing lexicon
 
 ``` r
@@ -162,7 +164,7 @@ Review_Starwars_newHope %>%
 ![sentiment analysis-1](/img/posts/sentiment-analysis-review-data/sentiment analysis-1.png)<!-- -->
 
 There is only one negative word occurring more than \>4 times. Other than that the sentiment is dominated by positive words like ‘love’ or ‘excellent’.
-
+<br>
 ### Creating a wordcloud with the most often used words
 
 ``` r
