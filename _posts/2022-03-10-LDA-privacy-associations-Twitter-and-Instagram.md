@@ -39,7 +39,7 @@ library(rjson)
 
 #### LDA topic model Instagram
 
-{% include Insta_LDA_model2 %}
+{% include '/_includes/Insta_LDA_model2.html2' %}
 
 <br>
 
