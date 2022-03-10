@@ -10,7 +10,7 @@ Sentiment analysis with Amazon reviews
 
 In this little tutorial I will show you how to gahter review data from Amazon and how to implement a simple sentiment analysis using the BING lexicon. The code for scraping data is a modified rewrite (I included the date as another variable) from Martin Chan (<https://martinctc.github.io/blog/>)
 
-## Note: Use at your own risk. Be ethical about user data.
+## Note: Use at your own risk. Be ethical about user data. <br>
 
 ### Required libraries
 
@@ -60,7 +60,7 @@ scrape_amazon <- function(ASIN, page_num){
          review_date,
          page = page_num) %>% return()}
 ```
-
+<br>
 ### Define ASIN and number of pages
 Since I am a big StarWars fan, I want to take a look at the reviews of
 the movie “a new hope” The movie got more than 1.000 reviews. But first
@@ -72,7 +72,7 @@ we want to scrape. In this example just set the number to 15.
 ASIN <- "B00VIZDW3S"
 page_range <- 1:15
 ```
-
+<br>
 ### Scrape the actual data
 In the next step we scrape the reviews from the pages 1-15. The code
 does include a break-system to avoid bot detection
@@ -97,13 +97,13 @@ lapply(page_range, function(i){
   scrape_amazon(ASIN = ASIN, page_num = j) 
 }) -> output_list
 ```
-  
+<br> 
 ### Transform data into a dataframe
 
 ``` r
 Starwars_newHope<- dplyr::bind_rows(output_list)
 ```
-  
+<br>
 ### Calculate/visualize the (mean) star rating
 
 ``` r
