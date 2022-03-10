@@ -41,27 +41,13 @@ library(rjson)
 
 #### LDA topic model Instagram
 
-#lda_insta {
-    zoom: 0.75;
-    -moz-transform: scale(0.75);
-    -moz-transform-origin: 0 0;
-    -o-transform: scale(0.75);
-    -o-transform-origin: 0 0;
-    -webkit-transform: scale(0.75);
-    -webkit-transform-origin: 0 0;
-    }
-    @media screen and (-webkit-min-device-pixel-ratio:0) {
-        #lda_insta {
-          zoom: 1;
-        }
-      }
-
-
 <iframe id = 'lda_insta' src="/img/posts/LDA-interactive/Insta_LDA_model2.html"
     sandbox="allow-same-origin allow-scripts"
-    width="780"
-    height="400"
-    seamless>
+    width="100%"
+    height="800"
+    seamless
+    style="-webkit-transform:scale(0.5);-moz-transform-scale(0.5);"
+    >
 </iframe>
 
 <br>
