@@ -41,6 +41,7 @@ library(rjson)
 
 #### LDA topic model Instagram
 
+<center>
 <iframe id = 'lda_insta' src="/img/posts/LDA-interactive/Insta_LDA_model2.html"
     sandbox="allow-same-origin allow-scripts"
     width="1210"
@@ -50,6 +51,7 @@ library(rjson)
     style="zoom: 0.55"
     >
 </iframe>
+</center>
 
 <br>
 
