@@ -41,17 +41,18 @@ library(rjson)
 
 #### LDA topic model Instagram
 
-
-<iframe id = 'lda_insta' src="/img/posts/LDA-interactive/Insta_LDA_model2.html"
-    sandbox="allow-same-origin allow-scripts"
-    width="1210"
-    height="800"
-    scrolling='no'
-    seamless
-    frameborder="0"
-    style="text-align: center"
-    >
-</iframe>
+<p align="center">
+    <iframe id = 'lda_insta' src="/img/posts/LDA-interactive/Insta_LDA_model2.html"
+        sandbox="allow-same-origin allow-scripts"
+        width="1210"
+        height="800"
+        scrolling='no'
+        seamless
+        frameborder="0"
+        style="text-align: center"
+        >
+    </iframe>
+ </p>
 
 
 <br>
