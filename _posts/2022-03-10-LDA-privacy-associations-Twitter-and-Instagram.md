@@ -10,17 +10,17 @@ LDA topic modeling using LDAvis
 
 ### Topic modeling of user’s privacy associations on Twitter and Instagram
 
-As part of my dissertation, I examined user generated content (Posts &
-Tweets) on the two Social media networks (SMNs) Twitter and Instagram.
+As part of my dissertation, I examined user generated content (UGC = Posts &
+Tweets) on Twitter and Instagram.
 More specifically I focussed on users’ privacy associations. I evaluated
-the UGC with the help of two topic models (LDAvis package in R).
+the UGC with help of two topic models (LDAvis package in R).
 
 A very helpful description of the modeling process can be found here: https://ldavis.cpsievert.me/reviews/reviews.html
 
-After modeling the html-doc was created via pyLDAvis.
+After modeling html-docs were created via pyLDAvis in order to embed the models in this post.
 
-Here I solely present the interactive results of the LDA models for Twitter
-and Instagram.
+Here I am solely presenting the interactive results of the LDA models for Twitter
+and Instagram. (Interpretation can be found in my dissertation)
 
 Note: Be ethical about user data.
 
