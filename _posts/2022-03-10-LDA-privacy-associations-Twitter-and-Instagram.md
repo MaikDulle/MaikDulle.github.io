@@ -43,11 +43,12 @@ library(rjson)
 
 <iframe src="/img/posts/LDA-interactive/Insta_LDA_model2.html"
     sandbox="allow-same-origin allow-scripts"
-    width="50%"
-    height="50%"
+    width="680px"
+    height="100%"
     scrolling ='no'
     frameborder="no" 
     framespacing="0"
+    seamless = 'seamless'
     >
 </iframe>
 
