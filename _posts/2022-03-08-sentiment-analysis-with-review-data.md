@@ -25,6 +25,7 @@ library(tm)
 library(wordcloud)
 library(rvest)
 ```
+<br>
 
 ### Scraping function
 
