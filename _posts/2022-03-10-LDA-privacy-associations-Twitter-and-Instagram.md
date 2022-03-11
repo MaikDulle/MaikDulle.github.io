@@ -17,10 +17,10 @@ the UGC with help of two topic models (LDAvis package in R).
 
 A very helpful description of the modeling process can be found here: https://ldavis.cpsievert.me/reviews/reviews.html
 
-After modeling html-docs were created via pyLDAvis in order to embed the models in this post.
+After modeling, html-docs were created via pyLDAvis in order to embed the models in this post.
 
-Here I am solely presenting the interactive results of the LDA models for Twitter
-and Instagram. (Interpretation can be found in my dissertation)
+Here I am solely presenting the interactive results of the LDA models for Instagram
+and Twitter. (Interpretation can be found in my dissertation)
 
 Note: Be ethical about user data.
 
