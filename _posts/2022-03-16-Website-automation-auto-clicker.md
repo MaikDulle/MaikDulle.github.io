@@ -7,7 +7,7 @@ background: '/img/posts/Website automation/gdpr-gcd4fb3122_1920.jpg'
 
 ## Note: Use at your own risk. Be ethical about usage. Further, I am not a professional programmer/developer.
 
-This little code only shows how easy you can automate navigation and clicks on website. While the code is running you can not use the computer because it would interfere with pyautogui. I used Jupyter Notebook to run the code.
+This little code only shows how easy you can automate navigation and clicks on websites. While the code is running, you can not use the computer because it would interfere with pyautogui. I used Jupyter Notebook to run the code.
 
 ![spongebob_gif_automation](/img/posts/Website automation/spongebob_gif_automation.gif)<!-- -->
 
