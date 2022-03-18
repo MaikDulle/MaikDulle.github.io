@@ -62,19 +62,14 @@ library(rjson)
 
 #### LDA topic model Twitter
 
-<div class="iframe-container">
-    <iframe id = 'lda_twitter' src="/img/posts/LDA-interactive/Twitter_LDA_model2.html"
-        sandbox="allow-same-origin allow-scripts"
-        width="1210"
-        height="800"
-        scrolling='no'
-        seamless
-        frameborder="0">
-    </iframe>
-</div>
 
-<style>
-  .iframe-container {
-		text-align:center;
-  }
-</style>
+<iframe class= "lda" id = 'lda_twitter' src="/img/posts/LDA-interactive/Twitter_LDA_model2.html"
+    sandbox="allow-same-origin allow-scripts"
+    width="1210"
+    height="800"
+    scrolling='no'
+    seamless
+    frameborder="0">
+</iframe>
+
+
