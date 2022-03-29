@@ -12,7 +12,7 @@ Collecting Twitter data using Twitter API
 
 ## Get your Twitter Developer Account
 
-First you have to set up a Twitter Developer Account. Go to
+First, you have to set up a Twitter Developer Account. Go to
 <https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api>
 and sign up.
 
@@ -34,8 +34,8 @@ library(stringr)
 
 ## Create a Twitter App and generate necessary keys and tokens
 
-In order to create an App you need to log in to Twitter Developer
-Account and add an app.
+In order to create an app, you need to log in to Twitter Developer
+Account and click on "+add app".
 
 ![Create Twitter App](/img/posts/Twitter-API-collection/Create Twitter App.JPG)<!-- -->
 
