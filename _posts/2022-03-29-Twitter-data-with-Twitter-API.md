@@ -35,7 +35,7 @@ library(stringr)
 ## Create a Twitter App and generate necessary keys and tokens
 
 In order to create an app, you need to log in to Twitter Developer
-Account and click on "+add app".
+Account and click on "+Add App".
 
 ![Create Twitter App](/img/posts/Twitter-API-collection/Create Twitter App.JPG)<!-- -->
 
