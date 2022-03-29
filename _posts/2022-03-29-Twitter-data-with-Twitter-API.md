@@ -2,7 +2,7 @@
 layout: post
 title: "Collecting Twitter tweets"
 subtitle: "Using Twitter API to collect Starwars tweets"
-background: 'img/posts/Twitter-API-collection/star-wars-g6aa903c6a_1920.jpg'
+background: '/img/posts/Twitter-API-collection/star-wars-g6aa903c6a_1920.jpg'
 ---
 
 Collecting Twitter data using Twitter API
