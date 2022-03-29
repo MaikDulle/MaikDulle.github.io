@@ -99,6 +99,29 @@ head(tweets_starwars$text, n = 5)
 
 <br>
 
-## Count the most frequently used words
+## Count the most frequently used words and plot them (using ggplot2)
+
+``` r
+tweets_starwars_only_text <- tweets_starwars %>%
+  dplyr::select(c(5)) %>% # select the "text" column
+  unnest_tokens(output = word, input = text)%>% # tokenization
+  anti_join(stop_words)%>% # remove stopwords
+  filter(!str_detect(word, "[:punct:]|[:digit:]")) #remove punctuation and numbers
+  
+
+tweets_starwars_only_text %>% 
+  count(word, sort = TRUE) %>%
+  mutate(word = reorder(word,n)) %>%
+  na.omit() %>%
+  top_n(15) %>% # take top 15 words
+  ggplot(aes(x = word,y = n)) +
+  geom_col() +
+  coord_flip() +
+      labs(x = "Most frequent words",
+      y = "Count",
+      title = "Words of star wars tweets ")
+```
+
+<br>
 
 ![starwars_tweets_word_count](/img/posts/Twitter-API-collection/starwars_tweets_word_count.png)<!-- -->
