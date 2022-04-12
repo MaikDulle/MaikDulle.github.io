@@ -24,6 +24,8 @@ library(stringr)
 library(tm)
 library(wordcloud)
 library(rvest)
+library(reshape2)
+library(SnowballC)
 ```
 <br>
 
@@ -150,9 +152,13 @@ Review_Starwars_newHope$review_text <- Review_Starwars_newHope$review_text%>%
   removeNumbers()%>%
   removePunctuation()%>%
   stripWhitespace()
+
 Review_Starwars_newHope <- Review_Starwars_newHope %>%
   unnest_tokens(output = "word", input = "review_text")%>%
   anti_join(tidytext::stop_words, by = "word")
+
+# In order to stem the data use SNOWBALLC
+# Review_Starwars_newHope_stem <- Review_Starwars_newHope %>% mutate(word = wordStem(word))
 ```
 
 <br>
@@ -182,6 +188,18 @@ There is only one negative word occurring more than \>4 times. Other than that t
 
 <br>
 
+### Calculating the overall sentiment using afinn lexicon
+
+```r
+Sentiment_Starwars_NewHope <- Review_Starwars_newHope %>%
+  inner_join(get_sentiments("afinn"))
+
+mean(Sentiment_Starwars_NewHope$value) # 1.18
+```
+The mean sentiment of the movie reviews are rather positive (overall sentiment score = 1.18)
+
+<br>
+
 ### Creating a wordcloud with the most often used words
 
 ``` r
@@ -194,3 +212,17 @@ word.freq.table<- Review_Starwars_newHope %>%
 ```
 
 ![wordcloud-1](/img/posts/sentiment-analysis-review-data/wordcloud-1.png)<!-- -->
+
+<br>
+
+### Create a wordcloud taking sentiment polarity under sccount
+```r
+Review_Starwars_newHope %>%
+  inner_join(get_sentiments("bing")) %>%
+  dplyr::count(word, sentiment, sort = TRUE) %>%
+  acast(word ~ sentiment, value.var = "n", fill = 0) %>%
+  comparison.cloud(colors = c("red", "green"),
+                   max.words = 20)
+```
+
+![Wordcloud-polarity](/img/posts/sentiment-analysis-review-data/Wordcloud-polarity.png)<!-- -->
