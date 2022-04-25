@@ -34,7 +34,7 @@ library(rstatix)
 
 ### Looking at the data
 
-After loading the data set, we look at the data (first 10 rows)
+After loading the data set, we look at the data (first 5 rows)
 
 ``` r
 head(netflix_binge_data, 5)
