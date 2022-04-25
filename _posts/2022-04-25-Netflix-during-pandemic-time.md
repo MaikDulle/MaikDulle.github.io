@@ -107,7 +107,7 @@ Interestingly or alarmingly, Cocomelon a TV show (audiance: preschool
 kids) is the TV show longest in the daily TOP 10 in the US over the
 course of the pandemic time 2020-2022 with 428 days. Followed by Ozak
 (85 days). Other shows like Cobra Kai (81 days), Squid Game (66 days)
-are fell behind by far. Movies are rarely longer than 15 days in the TOP
+are behind by far. Movies are rarely longer than 15 days in the TOP
 10.
 
 ![csm_Cocomelon_Key_Image_1920x1080-neu_f066e95bae](/img/posts/netflix-pandemic-US/csm_Cocomelon_Key_Image_1920x1080-neu_f066e95bae.jpg)<!-- -->
