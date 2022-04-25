@@ -114,7 +114,7 @@ are behind by far. Movies are rarely longer than 15 days in the TOP
 
 <br>
 
-### Visaualization
+### Visualization
 
 First filter (excluding all movie/series mentioned less than 60 times)
 and using ggplot to visualize
