@@ -8,7 +8,7 @@ background: '/img/posts/netflix-pandemic-US/binge-watching.jpg'
 Pandemic netflix consumption
 ================
 
-## Netflix consumption during the pandemic in the US
+## During the pandemic 2020-2022 in the US
 
 In this post I would like to look at some netflix data containing daily
 TOP10 on Netflix US during pandemic (04/2020-04/2022). Specifically, the
