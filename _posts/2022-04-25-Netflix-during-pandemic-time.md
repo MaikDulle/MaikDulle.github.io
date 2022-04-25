@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Netflix consumption during pandemic"
-subtitle: "Taking a look at US netlfix data from april 2020-2022"
+subtitle: "Taking a look at US netflix data from april 2020-2022"
 background: '/img/posts/netflix-pandemic-US/binge-watching.jpg'
 ---
 
