@@ -205,4 +205,4 @@ Show_comparison_pandemic %>%
 
 The test shows us that the rank of Bridgerton & Ozark, Cobra Kai &
 Ozark, Money Heist & Tiger King, Ozark & Squid Game and Ozark & Tiger
-King differ significantly.
+King differ significantly. (Should be interpreted with caution, as the distribution of data points (n1/n2) is quite uneven)
