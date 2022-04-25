@@ -71,8 +71,6 @@ difference might be explained by the fact that watching a TV show with
 episodes takes longer or that the pandemic time increased binge watching
 habits.
 
-<br>
-
 Next we check what shows stayed in the TOP 10 the longest.
 
 ``` r
@@ -111,8 +109,6 @@ course of the pandemic time 2020-2022 with 428 days. Followed by Ozak
 (85 days). Other shows like Cobra Kai (81 days), Squid Game (66 days)
 are fell behind by far. Movies are rarely longer than 15 days in the TOP
 10.
-
-<br>
 
 ![csm_Cocomelon_Key_Image_1920x1080-neu_f066e95bae](/img/posts/netflix-pandemic-US/csm_Cocomelon_Key_Image_1920x1080-neu_f066e95bae.jpg)<!-- -->
 
