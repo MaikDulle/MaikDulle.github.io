@@ -215,7 +215,7 @@ word.freq.table<- Review_Starwars_newHope %>%
 
 <br>
 
-### Create a wordcloud taking sentiment polarity under sccount
+### Create a wordcloud taking sentiment polarity under account
 ```r
 Review_Starwars_newHope %>%
   inner_join(get_sentiments("bing")) %>%
