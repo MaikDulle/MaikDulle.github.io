@@ -160,6 +160,8 @@ aggregate(Show_comparison_pandemic$Rank ~ Show_comparison_pandemic$Title, FUN = 
     ## 5                     Squid Game                      3.500000
     ## 6   Tiger King: Murder, Mayhem …                      2.724138
 
+We see that tiger King has the best average ranking with m = 2.72, followed by Squid Game (m = 3.50) and Bridgerton (m = 3.55). From the selected shows Ozark (m = 5.12) has the worst average ranking. 
+
 <br>
 
 ``` r
