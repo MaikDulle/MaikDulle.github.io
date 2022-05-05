@@ -29,14 +29,11 @@ library(rgl)
 library(htmlwidgets)
 ```
 
+<br>
+
 ### load grids
 
 Grids you want to import follow the format:
-
-1         E1 E2 E3 E4           5  
-left pole 1  5  3  4   right pole  
-left pole 3  1  1  3   right pole  
-left pole 4  2  5  1   right pole
 
 1 | E1 | E2 | E3 | E4 | 5
 -- | -- | -- | -- | -- | --
@@ -52,12 +49,16 @@ Grid2 <- importExcel("your path+document name.xlsx", min = 1, max = 5)
 Grid3 <- importExcel("your path+document name.xlsx", min = 1, max = 5)
 ```
 
+<br>
+
 ### combine grids to one long grid
 
 ``` r
 # this is just example code
 Gridall <- bindConstructs(Grid1, Grid2, Grid3)
 ```
+
+<br>
 
 ### plot 3d Slater biplot
 
