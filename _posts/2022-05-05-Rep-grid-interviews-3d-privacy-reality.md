@@ -38,6 +38,12 @@ left pole 1  5  3  4   right pole
 left pole 3  1  1  3   right pole  
 left pole 4  2  5  1   right pole
 
+1 | E1 | E2 | E3 | E4 | 5
+-- | -- | -- | -- | -- | --
+left pole | 1 | 5 | 3 | 4 | right pole 
+left pole | 3 | 1 | 1 | 3 | right pole
+left pole | 4 | 2 | 5 | 1 | right pole
+
 ``` r
 # load different grid interviews
 # this is just example code
