@@ -80,5 +80,5 @@ rgl.postscript("biplot3d.pdf", "pdf")
 rgl.snapshot("your path+document name.png", fmt = "png")
 
 # save as a standalone html-doc
-htmlwidgets::saveWidget(rglwidget(width = '1000', height = '700'), "your path+document name.html")
+htmlwidgets::saveWidget(rglwidget(width = '800', height = '600'), "your path+document name.html")
 ```
