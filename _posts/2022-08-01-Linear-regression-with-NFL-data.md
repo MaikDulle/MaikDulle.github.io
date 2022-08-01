@@ -221,7 +221,7 @@ everytime you want to analyze something)
 scatterplot(Score ~ TotalYards, data = Stats_per_Team_Season_wOL, frame = FALSE)
 ```
 
-![linear-assumption-Rplot](/img/posts/Linear-regression/linear assumption_Rplot.png)<!-- -->
+![linear-assumption-Rplot](/img/posts/Linear-regression/linear-assumption-Rplot.png)<!-- -->
 
 We see that there is still quite a high variation (some teams with
 little yards and a lot of points - the plot also identifies those as
@@ -334,4 +334,4 @@ scatterplot(Score~PassAttempts, data = Stats_per_Team_Season_wOL, frame=FALSE)
 
 ![neg_effect_passattempts_Rplot1](/img/posts/Linear-regression/neg_effect_passattempts_Rplot01.png)<!-- -->
 
-Note: The data distribution is quite focused on the middle and there is little correlation between Score and PassAttempts. Therefore, interpret with caution.
+Note: The data distribution is quite focused on the middle and there seems to be little correlation between Score and PassAttempts. Therefore, interpret with caution.
