@@ -78,7 +78,7 @@ Remove missing values and create some more interesting variables
 # Since we are just interested in the plays that are correctly specified (pass, run, sack), we can use those factor levels to subset our data and just ignore all plays that are misspecified with NA
 
 NFL_selected_var_clean <- filter(NFL_selected_var, Play_type %in% c("Pass", "Run", "Sack")) %>%
-  group_by(Game_id, Possessing_team, Season) #only 245010 observations left
+  group_by(Game_id, Possessing_team, Season) #only 290833 observations left
 
 # We can check the play by play data (not all columns are shown)
 head(NFL_selected_var_clean)
