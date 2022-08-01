@@ -306,7 +306,7 @@ summary(mulitple_regression_model)
 
 Again the F-statisitcs is significant indicating that at least one of
 our X variaibles has a significant effect. The R-squared increased from
-\~ 33% to over 49%. And our coefficients all have a significant impact
+\~ 33% to over 50%. And our coefficients all have a significant impact
 on Score. PassYards, RushYards, RushAttempts do have a positive effect
 on Score, while Interceptions, Fumbles and Sacks have a negative effect
 on Score (because defense wins championships!). Surprisingly,
