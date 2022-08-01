@@ -8,7 +8,7 @@ background: '/img/posts/Linear-regression/qfics0e7hn0kjualdh17.jpg'
 ## Linear regression with NFL data
 
 We want to check if different characteristics like passing and rush
-yards predict predict the score of the possessing team. In order to
+yards predict the score of the possessing team. In order to
 check this (and other relationships) we will use a real-word dataset
 containing 407688 observations and 102 variables about real NFL plays
 from 2009 to 2017.
@@ -55,7 +55,7 @@ NFL_selected_var[cols_numeric] <- lapply(NFL_selected_var[cols_numeric], as.nume
 ```
 
 
-Afterwards we are calculate a new three new varaiables: season, rush
+Afterwards we are calculate a new three new variables: season, rush
 yards, passing yards
 
 ``` r
