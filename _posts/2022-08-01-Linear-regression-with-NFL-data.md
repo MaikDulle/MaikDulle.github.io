@@ -2,9 +2,8 @@
 layout: post
 title: "Linear regression with NFL data"
 subtitle: "Simple and multiple regression with NFL data"
-background: 'img/posts/Linear-regression/qfics0e7hn0kjualdh17.jpg'
+background: '/img/posts/Linear-regression/qfics0e7hn0kjualdh17.jpg'
 ---
-================
 
 ## Linear regression with NFL data
 
@@ -31,7 +30,7 @@ library(car)
 ### Load the dataset
 
 ``` r
-NFL_data_all <- read.csv("D:/Github Blogpage/02_Linear regression analyis using gaming data/NFL_Play_by_Play_2009_2017.csv", sep = ",")
+NFL_data_all <- read.csv("your_path", sep = ",")
 ```
 
 <br>
@@ -222,7 +221,7 @@ everytime you want to analyze something)
 scatterplot(Score ~ TotalYards, data = Stats_per_Team_Season_wOL, frame = FALSE)
 ```
 
-![](img/posts/Linear-regression/linear assumption_Rplot.png)<!-- -->
+![Linear assumption_R](/img/posts/Linear-regression/linear assumption_Rplot.png)<!-- -->
 
 We see that there is still quite a high variation (some teams with
 little yards and a lot of points - the plot also identifies those as
@@ -333,6 +332,6 @@ set.seed(42)
 scatterplot(Score~PassAttempts, data = Stats_per_Team_Season_wOL, frame=FALSE)
 ```
 
-![](img/posts/Linear-regression/neg_effect_passattempts_Rplot01.png)<!-- -->
+![](/img/posts/Linear-regression/neg_effect_passattempts_Rplot01.png)<!-- -->
 
 Note: The data distribution is quite focused on the middle and there is little correlation between Score and PassAttempts. Therefore, interpret with caution.
