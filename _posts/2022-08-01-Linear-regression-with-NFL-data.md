@@ -25,7 +25,6 @@ library(ggplot2)
 library(car)
 ```
 
-<br>
 
 ### Load the dataset
 
@@ -33,7 +32,6 @@ library(car)
 NFL_data_all <- read.csv("your_path", sep = ",")
 ```
 
-<br>
 
 ### Data preparation
 
@@ -56,7 +54,6 @@ NFL_selected_var[cols_factors] <- lapply(NFL_selected_var[cols_factors], factor)
 NFL_selected_var[cols_numeric] <- lapply(NFL_selected_var[cols_numeric], as.numeric) # convert column values to numeric
 ```
 
-<br>
 
 Afterwards we are calculate a new three new varaiables: season, rush
 yards, passing yards
@@ -74,7 +71,6 @@ NFL_selected_var <-NFL_selected_var %>%
   mutate(Rushing_yards = ifelse(Rush_attempts == 1, Yards_gained, 0))
 ```
 
-<br>
 
 Remove missing values and create some more interesting variables
 
@@ -102,7 +98,6 @@ head(NFL_selected_var_clean)
     ## #   Rush_attempts <dbl>, Pass_attempts <dbl>, Sack <dbl>, Season <chr>,
     ## #   Passing_yards <dbl>, Rushing_yards <dbl>
 
-<br>
 
 ### Summerize (condense) dataset further and describe it
 
@@ -125,8 +120,6 @@ Stats_per_Team_Season <- NFL_selected_var_clean %>%
   filter(Possessing_team != "")
 ```
 
-<br>
-
 ``` r
 # check our new dataframe - it shows the averages for specific team for a specific game (see Game_id)
 head(Stats_per_Team_Season)
@@ -146,7 +139,6 @@ head(Stats_per_Team_Season)
     ## #   Fumbles <dbl>, Sacks <dbl>, Interceptions <dbl>, PassPerc <dbl>,
     ## #   AvgRush <dbl>, AvgPass <dbl>
 
-<br>
 
 ``` r
 # average across all teams (season 2009-2018)
@@ -175,7 +167,6 @@ summary(Stats_per_Team_Season[4:15])
     ##  3rd Qu.:0.6464   3rd Qu.: 5.059   3rd Qu.: 8.341  
     ##  Max.   :0.8727   Max.   :13.562   Max.   :16.133
 
-<br>
 
 We can see that on average 20.7 points were scored in teh NFL from
 2009-2017. Passing yards on average were 248.0 while rushing yards on
@@ -184,7 +175,6 @@ outlier (max 792.0). Average rush yards were 4.29 and average passing
 yards were 7.25. Nearly one interception, 2.3 sacks and slightly more
 than one fumble was produced by the teams.
 
-<br>
 
 #### Dealing with outliers
 
@@ -201,7 +191,6 @@ iqr <- IQR(Stats_per_Team_Season$TotalYards)
 Stats_per_Team_Season_wOL<- subset(Stats_per_Team_Season, Stats_per_Team_Season$TotalYards > (Q[1] - 1.5*iqr) & Stats_per_Team_Season$TotalYards < (Q[2]+1.5*iqr))
 ```
 
-<br>
 
 ### Simple linear regression analysis
 
@@ -263,6 +252,7 @@ Afterwards we can interpret our coefficient. For our used dataset we see
 the independent variable TotalYards does significantly increase our
 dependent variable Score (ß = 0.070, p \< 0.01). Meaning, when we
 increase TotalYars by one unit, Score will increase by 0.07.
+
 
 ### Multiple linear regression analysis
 
