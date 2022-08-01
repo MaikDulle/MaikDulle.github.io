@@ -16,7 +16,7 @@ from 2009 to 2017.
 The dataset (V4) can be found under:
 <https://www.kaggle.com/datasets/maxhorowitz/nflplaybyplay2009to2016?select=NFL+Play+by+Play+2009-2017+%28v4%29.csv>
 
-### required libraries
+### Required libraries
 
 ``` r
 library(stats)
