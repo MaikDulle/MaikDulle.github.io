@@ -173,7 +173,7 @@ We can see that on average 20.7 points were scored in teh NFL from
 average were 114.5. Note that the max total yards include an unrealistic
 outlier (max 792.0). Average rush yards were 4.29 and average passing
 yards were 7.25. Nearly one interception, 2.3 sacks and slightly more
-than one fumble was produced by the teams.
+than one fumble was produced by the teams. Further we can see that on average ~ 57% were passing plays (var. PassPerc).
 
 
 #### Dealing with outliers
