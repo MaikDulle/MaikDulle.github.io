@@ -141,7 +141,7 @@ head(Stats_per_Team_Season)
 
 
 ``` r
-# average across all teams (season 2009-2018)
+# average across all teams (season 2009-2017)
 summary(Stats_per_Team_Season[4:15])
 ```
 
