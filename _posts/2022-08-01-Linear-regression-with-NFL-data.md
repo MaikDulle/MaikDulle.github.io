@@ -312,7 +312,7 @@ on Score, while Interceptions, Fumbles and Sacks have a negative effect
 on Score (because defense wins championships!). Surprisingly,
 PassAttempts also have a negative effect. A possible explanation could
 be that passing game is more prone to interceptions and incomplete
-passes (0 yards). In a last step we want to check how the negative
+passes (0 yards), especially when teams are under pressure to score. In a last step we want to check how the negative
 effect looks like by plotting a scatterplot.
 
 ``` r
