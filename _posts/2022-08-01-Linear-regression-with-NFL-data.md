@@ -31,7 +31,7 @@ library(car)
 ``` r
 NFL_data_all <- read.csv("your_path", sep = ",")
 ```
-
+<br>
 
 ### Data preparation
 
@@ -98,6 +98,7 @@ head(NFL_selected_var_clean)
     ## #   Rush_attempts <dbl>, Pass_attempts <dbl>, Sack <dbl>, Season <chr>,
     ## #   Passing_yards <dbl>, Rushing_yards <dbl>
 
+<br>
 
 ### Summerize (condense) dataset further and describe it
 
@@ -191,6 +192,7 @@ iqr <- IQR(Stats_per_Team_Season$TotalYards)
 Stats_per_Team_Season_wOL<- subset(Stats_per_Team_Season, Stats_per_Team_Season$TotalYards > (Q[1] - 1.5*iqr) & Stats_per_Team_Season$TotalYards < (Q[2]+1.5*iqr))
 ```
 
+<br>
 
 ### Simple linear regression analysis
 
