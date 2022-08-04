@@ -7,7 +7,11 @@ background: '/img/posts/logit/star-wars-ranking-header-2.jpg'
 
 ## Logistic models: Frequentist vs Bayesian approach
 
+<br>
+
 ### Note: Use at your own risk. Be ethical about user data.
+
+<br>
 
 ## Required libraries
 
