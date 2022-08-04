@@ -117,11 +117,11 @@ summary(Freq_logit_SW)
 It is important to notice, that not all our variables are appearing
 under ‘Coefficients’. Certain variable levels (female, \> 60, No
 Trek_Fan, 0-24,999) do function as our (comparison) baseline and are
-reflected in the intercept. From example our output we see that the
+reflected in the intercept. From example in our output we see that the
 predictors GenderMale (ß = 0.52, p \< 0.01) or StarTrek fan (ß = 2.64, p
-\< 0.01) have a positive significant influence of our dependent
+\< 0.01) have a positive significant influence on our dependent
 variable. Therefore we can conclude that StarTrek fans/Males are
-significantly more likely to have watched at least one star wars movie.
+significantly more likely to have watched at least one star wars movie than non StarTrek fans/Females.
 But we cant interpret these results as easily as in the linear
 regression since the estimates are based on a logit scale.
 
