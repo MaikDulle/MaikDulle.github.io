@@ -9,10 +9,6 @@ background: '/img/posts/logit/star-wars-ranking-header-2.jpg'
 
 <br>
 
-### Note: Use at your own risk. Be ethical about user data.
-
-<br>
-
 ## Required libraries
 
 ``` r
