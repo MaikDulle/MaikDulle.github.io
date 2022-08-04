@@ -32,6 +32,8 @@ This StarWars survey was conducted by FiveThirtyEight. In sum data from
 starwars_data <- read.csv("https://raw.githubusercontent.com/fivethirtyeight/data/master/star-wars-survey/StarWars.csv", sep = ",")
 ```
 
+<br>
+
 ## Select data, create a dataframe & rename columns
 
 ``` r
@@ -44,6 +46,8 @@ starwars_data <- starwars_data[-c(1), ] # remove the row with 'response'
 
 names(starwars_data) <- c("Watched_SW","Trek_Fan","Gender","Age","Income") #rename columns to shorten them 
 ```
+
+<br>
 
 ## Deal with missing values, recode dependent variable and factorizing the others
 
@@ -64,6 +68,8 @@ str(starwars_data)
     ##  $ Income    : Factor w/ 5 levels "$0 - $24,999",..: 1 1 2 2 4 1 4 4 5 1 ...     # factor
     ##  - attr(*, "na.action")= 'omit' Named int [1:328] 1 7 8 11 12 15 18 19 21 22 ...
     ##   ..- attr(*, "names")= chr [1:328] "2" "8" "9" "12" ...
+
+<br>
 
 ## Frequentist multiple logistic regression
 
