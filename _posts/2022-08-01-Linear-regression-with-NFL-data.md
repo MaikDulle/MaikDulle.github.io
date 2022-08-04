@@ -260,7 +260,7 @@ increase TotalYars by one unit, Score will increase by 0.07.
 
 In the simple regression we saw that TotalYards have an sigificant
 effect on Score. But the predicitive power of our simple model was
-rather low (indicated by a low R-squared). This suggests that we have
+rather mediocre (indicated by a low R-squared). This suggests that we have
 not taken all relevant variables into account in our simple regression
 model. Therefore we now want to calculate a multiple linear regression
 model. A multiple linear regression model includes MULTIPLE independent
