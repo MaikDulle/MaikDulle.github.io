@@ -77,7 +77,7 @@ str(starwars_data)
 
 ## Frequentist multiple logistic regression
 
-Since our dependent varaible is binary (0/1), we assume the following
+Since our dependent variable is binary (0/1), we assume the following
 model for our frequentist multiple logistic regression:
 
 Watched_SWi = β0+ β1Genderi + β2Agei+ β3Locationi + β4Trek_Fan +
