@@ -5,10 +5,6 @@ subtitle: "Logistic regression: Frequentist vs Bayesian approach"
 background: '/img/posts/logit/star-wars-ranking-header-2.jpg'
 ---
 
-## Logistic models: Frequentist vs Bayesian approach
-
-<br>
-
 ## Required libraries
 
 ``` r
