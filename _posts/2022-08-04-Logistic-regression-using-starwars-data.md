@@ -13,6 +13,7 @@ library(oddsratio)
 library(brms)
 library(stats)
 ```
+<br>
 
 ## Load the data
 
