@@ -46,6 +46,8 @@ rather inspired by a cool projects you can find here:
 
 The city center would quickly turn into a zombie stronghold and would no longer be safe.
 
+<br>
+
 ## Visualize the development
 
 ![](/img/posts/zombies-in-bremen/SIR model zombies in Bremen.png)<!-- -->
