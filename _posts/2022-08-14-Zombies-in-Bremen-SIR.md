@@ -44,11 +44,13 @@ rather inspired by a cool projects you can find here:
     frameborder="0">
 </iframe>
 
+The city center would quickly turn into a zombie stronghold and would no longer be safe.
+
 ## Visualize the development
 
 ![](/img/posts/zombies-in-bremen/SIR model zombies in Bremen.png)<!-- -->
 
 In this visualization I set the total population to 569.352 (number of
-citizens in Bremen 2019). As we can see after 40 days there is little
+citizens in Bremen 2019). Beta and gamma stayed the same. As we can see after 40 days there is little
 hope left and the zombies take over entirely. Of course the scenario is
 rather pessimistic, but otherwise it would only be half as interesting.
