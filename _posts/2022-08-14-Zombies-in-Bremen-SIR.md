@@ -20,7 +20,7 @@ within a population. The letters stand for:
     stands for REMOVED zombies and describes the number of zombies
     eliminanted by non-infected individuals
 
-Further the model included the two parameters beta and gamma. Beta
+Further, the model included the two parameters beta and gamma. Beta
 describes the infection rate (how quickly the infection is spreading)
 and gamma describes zombie death/elimination rate. For the next model I
 used a beta of 0.3 and a gamma of 0.05 (since not everybody is a natural
