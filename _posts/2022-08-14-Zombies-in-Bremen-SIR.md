@@ -30,7 +30,7 @@ I placed the patient zero in the city center of Bremen because a crowded
 place is most likely the starting point of the apocalypse.
 
 Note. I didnt not come up with the model specification myself, but was
-rather inspired by a cool projects you can find here:
+rather inspired by a cool project you can find here:
 <http://maxberggren.se/2014/11/27/model-of-a-zombie-outbreak/>
 
 ## Spread model
