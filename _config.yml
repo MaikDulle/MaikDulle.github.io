@@ -24,8 +24,9 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
 highlighter: rouge
+google_site_verification:  googleae698a7c539367fd.html
 
 donations:
   paypal:
-    text:           Donate      # Button text
+    text:           Buy me a Drink :)      # Button text
     id:             TH43ZR45K73ZQ  # PayPal button ID
