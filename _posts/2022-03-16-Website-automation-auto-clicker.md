@@ -125,6 +125,7 @@ with Controller.from_port(port=9051) as controller:
         except Exception as e:
             print(f"An error occurred: {str(e)}")
 ```
+It is important that you have TOR browser installed and that the Control Port is activated (add ControlPort 9051 in torrc file)
 
 <br>
 
