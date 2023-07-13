@@ -32,7 +32,7 @@ library(lavaan)
 library(semPlot)
 library(semTools)
 ```
-<br>
+
 
 The data was renamed and a product variable was added to make it more
 suitable for the courses context.
