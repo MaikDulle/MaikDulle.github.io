@@ -327,7 +327,7 @@ leveneTest(Sales ~ Product, data = BR_data)# p-value indicates violation of assu
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 ``` r
-plot(aov_BR, which = 3) # but visual inspection shows that there is a case for homogeneity of variances
+plot(aov_BR, which = 3) # visual inspection show a more indeifferent pciture. Line is not entirely straight - more likely a violation  of assumption of homogeneity of variances. But for the sake of exercise we contiune.
 ```
 
 ![](/img/posts/RWorkshop/4th_plot.png)<!-- -->
@@ -714,8 +714,6 @@ psych::fa.parallel(BR_FA_data)
 ``` r
 BR_EFA <- fa(BR_FA_data, nfactors = 3) 
 ```
-
-    ## Lade nötigen Namensraum: GPArotation
 
 ``` r
 BR_EFA # 3 factor solution and 67% variance explained
