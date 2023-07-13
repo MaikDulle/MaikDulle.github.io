@@ -266,7 +266,7 @@ ggplot(Sales_means, aes(x=Product, y=mean_sales)) +
   geom_bar(stat="identity")
 ```
 
-![](R_Intro_Workshop_files/figure-gfm/Descriptives-1.png)<!-- -->
+![](img\posts\RWorkshop\1st_plot.png)<!-- -->
 
 ``` r
 # another example looking at brand trust
@@ -288,7 +288,7 @@ ggplot(Trust_means, aes(x=Product, y=mean_trust)) +
   geom_bar(stat="identity")
 ```
 
-![](R_Intro_Workshop_files/figure-gfm/Descriptives-2.png)<!-- -->
+![](img\posts\RWorkshop\2nd_plot.png)<!-- -->
 
 ## ANOVA
 
@@ -312,7 +312,7 @@ shapiro.test(aov_BR$residuals) # p-value of the Shapiro-Wilk test is significant
 hist(aov_BR$residuals) # visual conformation of ignore this test
 ```
 
-![](R_Intro_Workshop_files/figure-gfm/ANOVA-1.png)<!-- -->
+![](img\posts\RWorkshop\3rd_plot.png)<!-- -->
 
 ``` r
 # 2nd: test for homogeneity of variances with Levene-Test
@@ -330,7 +330,7 @@ leveneTest(Sales ~ Product, data = BR_data)# p-value indicates violation of assu
 plot(aov_BR, which = 3) # but visual inspection shows that there is a case for homogeneity of variances
 ```
 
-![](R_Intro_Workshop_files/figure-gfm/ANOVA-2.png)<!-- -->
+![](img\posts\RWorkshop\4th_plot.png)<!-- -->
 
 ``` r
 # 3rd dealing with outliers
@@ -339,7 +339,7 @@ ggplot(BR_data) +
   geom_boxplot()
 ```
 
-![](R_Intro_Workshop_files/figure-gfm/ANOVA-3.png)<!-- -->
+![](img\posts\RWorkshop\5th_plot.png)<!-- -->
 
 ``` r
 # dealing with outliers
@@ -355,7 +355,7 @@ ggplot(BR_data_eliminated) +
   geom_boxplot()
 ```
 
-![](R_Intro_Workshop_files/figure-gfm/ANOVA-4.png)<!-- -->
+![](img\posts\RWorkshop\6th_plot.png)<!-- -->
 
 ``` r
 # 4th evaluation and post-hoc
@@ -389,7 +389,7 @@ TukeyHSD(aov_BR_wO) # all products are significantly different in terms of sales
 plot(TukeyHSD(aov_BR_wO))
 ```
 
-![](R_Intro_Workshop_files/figure-gfm/ANOVA-5.png)<!-- -->
+![](img\posts\RWorkshop\7th_plot.png)<!-- -->
 
 ## ANCOVA
 
@@ -484,7 +484,7 @@ ggscatter(BR_data_eliminated, x = "Custom_rating", y = "Test_rating",
 
     ## `geom_smooth()` using formula = 'y ~ x'
 
-![](R_Intro_Workshop_files/figure-gfm/Cor%20&%20LM-1.png)<!-- -->
+![](img\posts\RWorkshop\8th_plot.png)<!-- -->
 
 ``` r
 # next check for normality assumption on both variables using our old friend Shapiro
@@ -596,7 +596,7 @@ ggscatter(BR_data_eliminated, x = "TV_spent", y = "Sales",
 
     ## `geom_smooth()` using formula = 'y ~ x'
 
-![](R_Intro_Workshop_files/figure-gfm/Cor%20&%20LM-2.png)<!-- -->
+![](img\posts\RWorkshop\9th_plot.png)<!-- -->
 
 ``` r
 # Simple Regression
@@ -687,7 +687,7 @@ psych::KMO(BR_FA_data) # rule of thumb KMO > 0.5
     ##           0.50
 
 ``` r
-# check for Significancy of the multiple correlations using Bartlett test
+# check for significancy of the multiple correlations using Bartlett-test
 psych::cortest.bartlett(BR_FA_data) # is significant
 ```
 
@@ -972,9 +972,6 @@ BR_SEM <- '
 
 BR_SEM_fit <- sem(BR_SEM, data = BR_data_eliminated) # warning messages indicates Heywood case (interpret with caution; maybe varaible are very strong correlated?)
 ```
-
-    ## Warning in lav_object_post_check(object): lavaan WARNING: some estimated lv
-    ## variances are negative
 
 ``` r
 summary(BR_SEM_fit, standardized = TRUE, fit.measures = T)
