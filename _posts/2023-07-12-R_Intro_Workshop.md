@@ -2,7 +2,7 @@
 layout: post
 title: "Introduction into RStudio"
 subtitle: "Script from latest workshop"
-background: 'img\posts\RWorkshop\stock-1863880_1280.jpg'
+background: '/img/posts/RWorkshop/stock-1863880_1280.jpg'
 ---
 
 RScript from R Introduction Workshop
@@ -266,7 +266,7 @@ ggplot(Sales_means, aes(x=Product, y=mean_sales)) +
   geom_bar(stat="identity")
 ```
 
-![](img\posts\RWorkshop\1st_plot.png)<!-- -->
+![](/img/posts/RWorkshop/1st_plot.png)<!-- -->
 
 ``` r
 # another example looking at brand trust
@@ -288,7 +288,7 @@ ggplot(Trust_means, aes(x=Product, y=mean_trust)) +
   geom_bar(stat="identity")
 ```
 
-![](img\posts\RWorkshop\2nd_plot.png)<!-- -->
+![](/img/posts/RWorkshop/2nd_plot.png)<!-- -->
 
 ## ANOVA
 
@@ -312,7 +312,7 @@ shapiro.test(aov_BR$residuals) # p-value of the Shapiro-Wilk test is significant
 hist(aov_BR$residuals) # visual conformation of ignore this test
 ```
 
-![](img\posts\RWorkshop\3rd_plot.png)<!-- -->
+![](/img/posts/RWorkshop/3rd_plot.png)<!-- -->
 
 ``` r
 # 2nd: test for homogeneity of variances with Levene-Test
@@ -330,7 +330,7 @@ leveneTest(Sales ~ Product, data = BR_data)# p-value indicates violation of assu
 plot(aov_BR, which = 3) # but visual inspection shows that there is a case for homogeneity of variances
 ```
 
-![](img\posts\RWorkshop\4th_plot.png)<!-- -->
+![](/img/posts/RWorkshop/4th_plot.png)<!-- -->
 
 ``` r
 # 3rd dealing with outliers
@@ -339,7 +339,7 @@ ggplot(BR_data) +
   geom_boxplot()
 ```
 
-![](img\posts\RWorkshop\5th_plot.png)<!-- -->
+![](/img/posts/RWorkshop/5th_plot.png)<!-- -->
 
 ``` r
 # dealing with outliers
@@ -355,7 +355,7 @@ ggplot(BR_data_eliminated) +
   geom_boxplot()
 ```
 
-![](img\posts\RWorkshop\6th_plot.png)<!-- -->
+![](/img/posts/RWorkshop/6th_plot.png)<!-- -->
 
 ``` r
 # 4th evaluation and post-hoc
@@ -389,7 +389,7 @@ TukeyHSD(aov_BR_wO) # all products are significantly different in terms of sales
 plot(TukeyHSD(aov_BR_wO))
 ```
 
-![](img\posts\RWorkshop\7th_plot.png)<!-- -->
+![](/img/posts/RWorkshop/7th_plot.png)<!-- -->
 
 ## ANCOVA
 
@@ -484,7 +484,7 @@ ggscatter(BR_data_eliminated, x = "Custom_rating", y = "Test_rating",
 
     ## `geom_smooth()` using formula = 'y ~ x'
 
-![](img\posts\RWorkshop\8th_plot.png)<!-- -->
+![](/img/posts/RWorkshop/8th_plot.png)<!-- -->
 
 ``` r
 # next check for normality assumption on both variables using our old friend Shapiro
@@ -596,7 +596,7 @@ ggscatter(BR_data_eliminated, x = "TV_spent", y = "Sales",
 
     ## `geom_smooth()` using formula = 'y ~ x'
 
-![](img\posts\RWorkshop\9th_plot.png)<!-- -->
+![](/img/posts/RWorkshop/9th_plot.png)<!-- -->
 
 ``` r
 # Simple Regression
@@ -630,7 +630,7 @@ ggplot(BR_data_eliminated, aes(x = TV_spent, y = Sales)) +
   stat_smooth()
 ```
 
-![](img\posts\RWorkshop\10th_plot.png)<!-- -->
+![](/img/posts/RWorkshop/10th_plot.png)<!-- -->
 
 ``` r
 # Multiple Regression
@@ -707,7 +707,7 @@ psych::cortest.bartlett(BR_FA_data) # is significant
 psych::fa.parallel(BR_FA_data)
 ```
 
-![](img\posts\RWorkshop\11th_plot.png)<!-- -->
+![](/img/posts/RWorkshop/11th_plot.png)<!-- -->
 
     ## Parallel analysis suggests that the number of factors =  3  and the number of components =  3
 
@@ -890,7 +890,7 @@ modindices(BR_CFA, sort = TRUE, maximum.number = 5)
 semPlot::semPaths(BR_CFA, "std")
 ```
 
-![](img\posts\RWorkshop\12th_plot.png)<!-- -->
+![](/img/posts/RWorkshop/12th_plot.png)<!-- -->
 
 ``` r
 # Addtition: Scale evaluation
