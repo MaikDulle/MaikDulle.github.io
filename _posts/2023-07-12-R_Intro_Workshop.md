@@ -14,7 +14,7 @@ Modified data from
 ‘<https://towardsdatascience.com/structural-equation-modeling-dca298798f4d>’
 was used. Thanks to the author to upload the dataset in a data s3
 bucket. If you want to replicate this Workshop, check the data prep code
-at the end of this post
+in this post!
 
 ## Required libraries
 
