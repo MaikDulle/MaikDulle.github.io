@@ -630,9 +630,7 @@ ggplot(BR_data_eliminated, aes(x = TV_spent, y = Sales)) +
   stat_smooth()
 ```
 
-    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
-
-![](R_Intro_Workshop_files/figure-gfm/Cor%20&%20LM-3.png)<!-- -->
+![](img\posts\RWorkshop\10th_plot.png)<!-- -->
 
 ``` r
 # Multiple Regression
@@ -709,7 +707,7 @@ psych::cortest.bartlett(BR_FA_data) # is significant
 psych::fa.parallel(BR_FA_data)
 ```
 
-![](R_Intro_Workshop_files/figure-gfm/FA-1.png)<!-- -->
+![](img\posts\RWorkshop\11th_plot.png)<!-- -->
 
     ## Parallel analysis suggests that the number of factors =  3  and the number of components =  3
 
@@ -892,7 +890,7 @@ modindices(BR_CFA, sort = TRUE, maximum.number = 5)
 semPlot::semPaths(BR_CFA, "std")
 ```
 
-![](R_Intro_Workshop_files/figure-gfm/FA-2.png)<!-- -->
+![](img\posts\RWorkshop\12th_plot.png)<!-- -->
 
 ``` r
 # Addtition: Scale evaluation
