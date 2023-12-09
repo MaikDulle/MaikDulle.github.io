@@ -1,0 +1,33 @@
+title:              Dr. Dulles data blog
+email:              dulle@uni-bremen.de
+description:        Data science and other (fun) projects 
+author:             Dr. Maik Dulle
+baseurl:            ""
+url:                "https://MaikDulle.github.io"
+
+# Social Profiles
+twitter_username:   
+github_username:    
+facebook_username:  
+instagram_username:  
+linkedin_username:
+
+# Add your google-analytics ID here to activate google analytics
+google_analytics:   G-NP9BDJ3H8V # out your google-analytics code
+
+# Build settings
+markdown:           kramdown
+paginate:           5
+paginate_path:      "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
+highlighter: rouge
+
+google_site_verification:  googleae698a7c539367fd.html
+
+donations:
+  paypal:
+    text:           Buy me a Drink :)      # Button text
+    id:             TH43ZR45K73ZQ  # PayPal button ID
