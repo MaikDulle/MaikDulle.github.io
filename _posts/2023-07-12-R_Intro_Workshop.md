@@ -8,7 +8,7 @@ background: '/img/posts/RWorkshop/stock-1863880_1280.jpg'
 RScript from R Introduction Workshop
 ================
 
-## This is a script from my latest R Introduction Workshop in July 2023
+## This is a script from my latest R Introduction Workshop
 
 Modified data from
 ‘<https://towardsdatascience.com/structural-equation-modeling-dca298798f4d>’
