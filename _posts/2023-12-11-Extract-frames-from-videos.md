@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "How to extract frames from videos"
-subtitle: "Works for single and multiple Videos"
+subtitle: "Works for single and multiple videos"
 background: '/img/posts/extract_frames/coding-924920_1280.jpg'
 ---
 
 ## Note: Use at your own risk. Be ethical about usage. Further, I am not a professional programmer/developer.
-
+<br>
 ## How to extract frames from (multiple) videos
 
 This little Code Snippet allows you to extract frames from one or multiple videos. 
@@ -41,7 +41,9 @@ def create_dir(path):
 
 <br>
 
-### Extract frames from video  
+### Extract frames from video 
+
+To do so we use the CV2 package
 ``` r
 def save_frame(video_path, save_dir, gap=100): #specify the gap
     name = video_path.split("/")[-1].split(".")[0]
@@ -74,10 +76,12 @@ if __name__ == "__main__":
         save_frame(path, save_dir, gap=100) #specify the gap
 ```  
 
+Now just put the videos you want to extract frames from in the video folder. Make sure the directory is set correctly and run the script. The output you will find in the save folder.
+
 <br>
 
 Here is a demo gif. Hope this will work for you too and happy coding :)
 
-![](/img/posts/extract_frames/Recording 2023-12-11 at 16.05.06.gif)<!-- -->
+![working_example_frames](/img/posts/extract_frames/working_example_frames.gif)<!-- -->
 
 This project is inspired by https://github.com/nikhilroxtomar.
