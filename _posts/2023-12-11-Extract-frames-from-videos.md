@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "How to extract Frames from Videos"
+title: "How to extract frames from videos"
 subtitle: "Works for single and multiple Videos"
-background: '/img/posts/Website automation/gdpr-gcd4fb3122_1920.jpg'
+background: '/img/posts/extract_frames/coding-924920_1280.jpg'
 ---
 
 ## Note: Use at your own risk. Be ethical about usage. Further, I am not a professional programmer/developer.
@@ -78,6 +78,6 @@ if __name__ == "__main__":
 
 Here is a demo gif. Hope this will work for you too and happy coding :)
 
-![spongebob_gif_automation](/img/posts/Website automation/spongebob_gif_automation.gif)<!-- -->
+![](/img/posts/extract_frames/Recording 2023-12-11 at 16.05.06.gif)<!-- -->
 
 This project is inspired by https://github.com/nikhilroxtomar.
