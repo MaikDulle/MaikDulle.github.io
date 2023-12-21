@@ -2,7 +2,7 @@
 layout: post
 title: "Build your own AI-Influencer"
 subtitle: "Using stable diffuson - A step by step guide"
-background: '/img/posts/Website automation/gdpr-gcd4fb3122_1920.jpg'
+background: '/img/posts/AI_Influencer/artificial-intelligence-2167835_1280.jpg'
 ---
 
 ## Note: Use at your own risk. Be ethical about usage. Further, I am not a professional programmer/developer.
