@@ -86,11 +86,11 @@ Here you can see the GUI of Automatic1111. I will just highlight the basic funct
 
 ### Download other checkpoints
 
-The base model downloaded when you first start stable diffusion is ok but you soon will want to go for better ones. You can find them online. One nice option is <https://civitai.com/models>. Here you can download different models/checkpoints for different purposes for free. You can just click on download. After downloading you have to add the checkpoint into the right folder (stable-diffusion-webui\models\Stable-diffusion)
+The base model downloaded when you first start stable diffusion is ok but you soon will want to go for better ones. You can find them online. One nice option is <https://civitai.com/models>. Here you can download different models/checkpoints for different purposes for free. You just click on download. After downloading you have to add the checkpoint into the right folder (stable-diffusion-webui\models\Stable-diffusion).
 
 After putting the models into the right folder you can choose them after starting webui-user. (I downloaded the two checkpoint 'Juggernaut' and 'Newreality')
 
-![model_select](img/posts/AI_Influencer/model_select.png)<!-- -->
+![model_select](/img/posts/AI_Influencer/model_select.png)<!-- -->
 
 <br>
 
