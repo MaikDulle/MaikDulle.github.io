@@ -61,7 +61,7 @@ For weak GPUs maybe '--lowvram' is necessary. This increases the processing time
 set COMMANDLINE_ARGS= --medvram --skip-torch-cuda-test --precision full --no-half
 ```
 
-If you want to configure the commandline arguments, Right-click on the webui-user.bat and 'edit' it.
+If you want to configure the commandline arguments, right-click on the webui-user.bat and 'edit' it.
 
 ![config_comm_arg](/img/posts/AI_Influencer/config_comm_arg.gif)<!-- -->
 
