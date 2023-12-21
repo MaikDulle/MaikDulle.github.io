@@ -141,7 +141,7 @@ And here are some more examples using the newreality checkpoint:
 </p>
 
 I know those still have some issues and can be fine tuned but I just wanted to showcase how easy you can generate images and your own AI Influencer using A1111. Its for sure a powerful tool.<br>
-Try it for yourself and happy prompting/generating! :)
+Try it yourself and happy prompting/generating! :)
 
 <br>
 
