@@ -9,12 +9,14 @@ background: '/img/posts/Website automation/gdpr-gcd4fb3122_1920.jpg'
 
 ## How to build your own AI-Influncer using stable difussion
 
-I am using Automatic1111 because with some modification you can also use it with nearly every GPU (> 8 GB). For other stable diffusion UIs you often need NVIDIA GPU.
+Want to use AI to generate images or build your own influencer but dont want to pay for Midjourney etc.? Dont worry, there are open source solution and I will show you how simple it is to use one of them.
+
+I am using Automatic1111 because its free, esy to use and with some modification you can also use it with nearly every GPU (> 8 GB). For other stable diffusion UIs you often need NVIDIA GPU.
 
 <br>
 
 ### Requirements before
-First, make sure Python 3.10.6 is installed (https://www.python.org/downloads/release/python-3106/). IMPORTANT: Newer versions are not supported + In the installation process you need to click on 'Add Python to PATH'.
+First, make sure Python 3.10.6 is installed (https://www.python.org/downloads/release/python-3106/). <br> IMPORTANT: Newer versions are not supported + In the installation process you need to click on 'Add Python to PATH'.<br>
 Second, you need to install GIT (https://git-scm.com/download/win).
 
 <br>
@@ -26,13 +28,13 @@ Create an empthy folder (e.g. called WEB UI) on your harddrive. Navigate to this
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 ```
 
-![gifcmd](/img/posts/Website automation/spongebob_gif_automation.gif)<!-- -->
+![gif_cmd_clone](img/posts/AI_Influencer/gif_cmd_clone.gif)<!-- -->
 
 <br>
 
 If you want to check for new updates (recom if something doesnt work anymore), you go into the 'stable-diffusion-webui' folder and 'git pull' into the cmd (same principle as the 'clone' command).
 
-![pullcmd](/img/posts/Website automation/spongebob_gif_automation.gif)<!-- -->
+![check_update](img/posts/AI_Influencer/check_update.png)<!-- -->
 
 <br>
 
@@ -40,7 +42,7 @@ If you want to check for new updates (recom if something doesnt work anymore), y
 
 Next you run the 'webui-user' from windows explorer by double clicking.
 
-![webui](/img/posts/Website automation/spongebob_gif_automation.gif)<!-- -->
+![WEB_UI_bat](img/posts/AI_Influencer/WEB_UI_bat.png)<!-- -->
 
 After the first start all dependencies etc. will be installed. This will take some time. Also a base model/checkpoint called 'v1-5-pruned-emaonly' will be downloaded. So you are basically set up to create your first images with stable diffusion.
 
@@ -61,7 +63,7 @@ set COMMANDLINE_ARGS= --medvram --skip-torch-cuda-test --precision full --no-hal
 
 If you want to configure the commandline arguments, Right-click on the webui-user.bat and 'edit' it.
 
-![configoptions](/img/posts/Website automation/spongebob_gif_automation.gif)<!-- -->
+![config_comm_arg](img/posts/AI_Influencer/config_comm_arg.gif)<!-- -->
 
 <br>
 
@@ -78,7 +80,7 @@ Here you can see the GUI of Automatic1111. I will just highlight the basic funct
   <li>You start image generation by clicking on 'Generate'</li>
 </ul> 
 
-![GUI_A1111](/img/posts/Website automation/spongebob_gif_automation.gif)<!-- -->
+![GUI](img/posts/AI_Influencer/GUI.png)<!-- -->
 
 <br>
 
@@ -86,11 +88,9 @@ Here you can see the GUI of Automatic1111. I will just highlight the basic funct
 
 The base model downloaded when you first start stable diffusion is ok but you soon will want to go for better ones. You can find them online. One nice option is https://civitai.com/models. Here you can download different models/checkpoints for different purposes for free. You can just click on download. After downloading you have to add the checkpoint into the right folder (stable-diffusion-webui\models\Stable-diffusion)
 
-![addcheckpoints](/img/posts/Website automation/spongebob_gif_automation.gif)<!-- -->
-
 After putting the models into the right folder you can choose them after starting webui-user. (I downloaded the two checkpoint 'Juggernaut' and 'Newreality')
 
-![modelchoice](/img/posts/Website automation/spongebob_gif_automation.gif)<!-- -->
+![model_select](img/posts/AI_Influencer/model_select.png)<!-- -->
 
 <br>
 
@@ -101,7 +101,7 @@ Negative prompts are thins you want to avoid in an image (e.g. oversaturated or 
 
 The cool thing about civitai is that if you click on a picture of a checkpoint (e.g. https://civitai.com/images/3962887) the used settings are shown. So you can copy and paste the negative prompts to improve your generation easily. And reading through different pos. prompts will help you to improve your own prompting.
 
-![modelchoice](/img/posts/Website automation/spongebob_gif_automation.gif)<!-- -->
+![prompt_example](img/posts/AI_Influencer/prompt_example.png)<!-- -->
 
 <br>
 
@@ -117,7 +117,7 @@ For my first try I wanted to create a male business influencer. Here is what I t
 
 And here is the result. Except for a little bit of weirdness in the eye region I would say quite impressive.
 
-![example1](/img/posts/Website automation/spongebob_gif_automation.gif)<!-- -->
+![example1](img/posts/AI_Influencer/example1.png)<!-- -->
 
 ### Troubleshooting and some more examples
 
@@ -126,15 +126,22 @@ https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Troubleshooting
 
 <br>
 
-And here are 2 more examples I created:
+And here are some more examples I created:
 
-![example2](/img/posts/Website automation/spongebob_gif_automation.gif)<!-- -->
+<p align="middle">
+  <img src="img/posts/AI_Influencer/example2.png" width="45%" />
+  <img src="img/posts/AI_Influencer/example3.png" width="45%" /> 
+</p>
 
-![example3](/img/posts/Website automation/spongebob_gif_automation.gif)<!-- -->
+<br>
 
-![example3](/img/posts/Website automation/spongebob_gif_automation.gif)<!-- -->
+<p align="middle">
+  <img src="img/posts/AI_Influencer/example4.png" width="45%" />
+  <img src="img/posts/AI_Influencer/example5.png" width="45%" /> 
+</p>
 
-Happy prompting and generating! :)
+
+Try for yourself and happy prompting/generating! :)
 
 <br>
 
