@@ -16,8 +16,8 @@ I am using Automatic1111 because its free, esy to use and with some modification
 <br>
 
 ### Requirements before
-First, make sure Python 3.10.6 is installed (https://www.python.org/downloads/release/python-3106/). <br> IMPORTANT: Newer versions are not supported + In the installation process you need to click on 'Add Python to PATH'.<br>
-Second, you need to install GIT (https://git-scm.com/download/win).
+First, make sure Python 3.10.6 is installed (<a https://www.python.org/downloads/release/python-3106/> </a>). <br> IMPORTANT: Newer versions are not supported + In the installation process you need to click on 'Add Python to PATH'.<br>
+Second, you need to install GIT (<a https://git-scm.com/download/win> </a>).
 
 <br>
 
@@ -32,7 +32,7 @@ git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 
 <br>
 
-If you want to check for new updates (recom if something doesnt work anymore), you go into the 'stable-diffusion-webui' folder and 'git pull' into the cmd (same principle as the 'clone' command).
+If you want to check for new updates (recom if something doesnt work anymore), you go into the 'stable-diffusion-webui' folder and type 'git pull' into the cmd (same principle as the 'clone' command).
 
 ![check_update](/img/posts/AI_Influencer/check_update.png)<!-- -->
 
@@ -51,7 +51,7 @@ After the first start all dependencies etc. will be installed. This will take so
 
 ### Configure webui-user.bat
 
-In some cases (too little system resources), you can configurate the command line and tell the stable diffusion to use less resources. Here you will find all possible configuration options you can choose from: https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Command-Line-Arguments-and-Settings#environment-variables
+In some cases (too little system resources), you can configurate the command line and tell the stable diffusion to use less resources. Here you will find all possible configuration options you can choose from: <a https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Command-Line-Arguments-and-Settings#environment-variables></a>
 
 <br>
 
@@ -86,7 +86,7 @@ Here you can see the GUI of Automatic1111. I will just highlight the basic funct
 
 ### Download other checkpoints
 
-The base model downloaded when you first start stable diffusion is ok but you soon will want to go for better ones. You can find them online. One nice option is https://civitai.com/models. Here you can download different models/checkpoints for different purposes for free. You can just click on download. After downloading you have to add the checkpoint into the right folder (stable-diffusion-webui\models\Stable-diffusion)
+The base model downloaded when you first start stable diffusion is ok but you soon will want to go for better ones. You can find them online. One nice option is <a https://civitai.com/models.></a> Here you can download different models/checkpoints for different purposes for free. You can just click on download. After downloading you have to add the checkpoint into the right folder (stable-diffusion-webui\models\Stable-diffusion)
 
 After putting the models into the right folder you can choose them after starting webui-user. (I downloaded the two checkpoint 'Juggernaut' and 'Newreality')
 
@@ -99,7 +99,7 @@ After putting the models into the right folder you can choose them after startin
 Positive prompts are the things you want in an image (e.g. blue eyes)
 Negative prompts are thins you want to avoid in an image (e.g. oversaturated or ugly)
 
-The cool thing about civitai is that if you click on a picture of a checkpoint (e.g. https://civitai.com/images/3962887) the used settings are shown. So you can copy and paste the negative prompts to improve your generation easily. And reading through different pos. prompts will help you to improve your own prompting.
+The cool thing about civitai is that if you click on a picture of a checkpoint (e.g. <a https://civitai.com/images/3962887></a>) the used settings are shown. So you can copy and paste the negative prompts to improve your generation easily. And reading through different pos. prompts will help you to improve your own prompting.
 
 ![prompt_example](/img/posts/AI_Influencer/prompt_example.png)<!-- -->
 
@@ -122,7 +122,7 @@ And here is the result. Except for a little bit of weirdness in the eye region I
 ### Troubleshooting and some more examples
 
 Also in the repo you can finde some more advice about troubleshooting. Check you this info:
-https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Troubleshooting
+<a https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Troubleshooting></a>
 
 <br>
 
@@ -145,4 +145,4 @@ Try for yourself and happy prompting/generating! :)
 
 <br>
 
-This project is inspired by https://www.youtube.com/watch?v=ky5ZB-mqZKM.
+This project is inspired by <a https://www.youtube.com/watch?v=ky5ZB-mqZKM><(a)>.
