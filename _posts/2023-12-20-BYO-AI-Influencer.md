@@ -107,7 +107,7 @@ The cool thing about civitai is that if you click on a picture of a checkpoint (
 
 ### First try on my own
 
-For my first try I wanted to create a male business influencer. Here is what I tried.
+For my first try I wanted to create a male business influencer using the juggernaut checkpoint. Here is what I tried.
 
 <ul>
   <li>Positive prompt: Business man, handsome, office, portrait, brown hair, blue eyes, down-to-earth, elegant, sharp focus, soft lighting, vibrant colors, hyperdetailed photography</li>
@@ -126,7 +126,7 @@ Also in the repo you can finde some more advice about troubleshooting. Check you
 
 <br>
 
-And here are some more examples I created:
+And here are some more examples using the newreality checkpoint:
 
 <p align="middle">
   <img src="/img/posts/AI_Influencer/example2.png" width="25%" />
@@ -140,9 +140,9 @@ And here are some more examples I created:
   <img src="/img/posts/AI_Influencer/example5.png" width="25%" /> 
 </p>
 
-I know those still have some issues and can be fine tuned but I just wanted to showcase how easy you can generate images and your own AI Influencer using A1111.
-Try for yourself and happy prompting/generating! :)
+I know those still have some issues and can be fine tuned but I just wanted to showcase how easy you can generate images and your own AI Influencer using A1111. Its for sure a powerful tool.<br>
+Try it for yourself and happy prompting/generating! :)
 
 <br>
 
-This project is inspired by <a https://www.youtube.com/watch?v=ky5ZB-mqZKM><(a)>.
+This project is inspired by <https://www.youtube.com/watch?v=ky5ZB-mqZKM>.
