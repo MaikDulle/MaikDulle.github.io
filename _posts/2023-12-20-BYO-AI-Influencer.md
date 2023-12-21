@@ -96,8 +96,8 @@ After putting the models into the right folder you can choose them after startin
 
 ### Prompting (pos/neg)
 
-Positive prompts are the things you want in an image (e.g. blue eyes)
-Negative prompts are thins you want to avoid in an image (e.g. oversaturated or ugly)
+Positive prompts are the things you want in an image (e.g. blue eyes). <br>
+Negative prompts are thins you want to avoid in an image (e.g. oversaturated or ugly).
 
 The cool thing about civitai is that if you click on a picture of a checkpoint (e.g. <https://civitai.com/images/3962887>) the used settings are shown. So you can copy and paste the negative prompts to improve your generation easily. And reading through different pos. prompts will help you to improve your own prompting.
 
