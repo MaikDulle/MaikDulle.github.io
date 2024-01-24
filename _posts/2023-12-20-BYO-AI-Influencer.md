@@ -7,6 +7,8 @@ background: '/img/posts/AI_Influencer/artificial-intelligence-2167835_1280.jpg'
 
 ## Note: Use at your own risk. Be ethical about usage. Further, I am not a professional programmer/developer.
 
+<br>
+
 ## How to build your own AI-Influencer using stable difussion
 
 Want to use AI to generate images or build your own influencer but dont want to pay for Midjourney etc.? Dont worry, there are open source solution and I will show you how simple it is to use one of them.
