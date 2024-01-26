@@ -2,7 +2,7 @@
 layout: post
 title: "Lets explore Sillicon Valley in a different way!"
 subtitle: "Scrape and analyze Google Maps Data"
-background: 'img/posts/GoogleMaps/mapoftheworld.png'
+background: '/img/posts/GoogleMaps/mapoftheworld.png'
 ---
 
 ## Note: Use at your own risk. Be ethical about usage. Further, I am not a professional programmer/developer.
