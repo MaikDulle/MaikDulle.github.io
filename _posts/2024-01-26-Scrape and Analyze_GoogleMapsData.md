@@ -393,6 +393,39 @@ m.save("heatmap_without_outliers.html")
 
 And here is the result:
 
+<style>
+  /* Container to control the size of the iframe */
+  .iframe-container {
+    position: relative;
+    overflow: hidden;
+    /* Set the aspect ratio (width:height) of your iframe */
+    padding-top: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+  }
+
+  /* Make the iframe fill the container */
+  .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+<body>
+
+  <!-- Container div for the iframe -->
+  <div class="iframe-container">
+      <!-- Your iframe goes here -->
+    <iframe 
+      class="responsive-iframe"
+      id = 'HM_SV' 
+      src="/img/posts/GoogleMaps/heatmap_without_outliers.html" 
+      frameborder="0" allowfullscreen>
+    </iframe>
+  </div>
+</body>
+
 <iframe class= "HM" id = 'HM_SV' src="/img/posts/GoogleMaps/heatmap_without_outliers.html"
     sandbox="allow-same-origin allow-scripts"
     width="1210"
