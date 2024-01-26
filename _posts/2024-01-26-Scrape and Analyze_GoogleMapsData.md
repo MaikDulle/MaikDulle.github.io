@@ -9,7 +9,7 @@ background: '/img/posts/GoogleMaps/mapoftheworld.png'
 
 ## Use the Google Maps Scraper to build a small data set
 
-You can use the Google Maps Scraper (https://github.com/omkarcloud/google-maps-scraper) to scrape data from Google Maps. It is limited to 120 entries per query but you can easily combine multiple queries and create a bigger dataset. Before installation make sure you have Google Chrome installed and download the matching Google Chrome Driver. Next clone Google Maps Scraper to your machine, install dependencies, configure the 'main' file to your needs. I had to manually put the Chrome Driver in the 'build' folder. Afterwards I could run it in my CMD without problems. For all of this I used Git CMD and VS Code on Win11.
+You can use the Google Maps Scraper (<https://github.com/omkarcloud/google-maps-scraper>) to scrape data from Google Maps. It is limited to 120 entries per query but you can easily combine multiple queries and create a bigger dataset. Before installation make sure you have Google Chrome installed and download the matching Google Chrome Driver. Next clone Google Maps Scraper to your machine, install dependencies, configure the 'main' file to your needs. I had to manually put the Chrome Driver in the 'build' folder. Afterwards I could run it in my CMD without problems. For all of this I used Git CMD and VS Code on Win11.
 
 For this example we will scrape data about tech companies from Sillicon Valley (Mountain View, California). Lets see how many companies there are and how they are rated on Google Maps.
 
@@ -309,7 +309,7 @@ We see in the plots that the normality assumption is violated. We will therefore
 
 <br>
 
-Next, lets check the correlation. We remember form our visualization of the number of reviews that we have a large outlier for the Googleplex. We will remove this outlier using the  IQR method (https://en.wikipedia.org/wiki/Interquartile_range).
+Next, lets check the correlation. We remember form our visualization of the number of reviews that we have a large outlier for the Googleplex. We will remove this outlier using the  IQR method (<https://en.wikipedia.org/wiki/Interquartile_range>).
 
 ``` r
 # Define a function to remove outliers based on IQR
