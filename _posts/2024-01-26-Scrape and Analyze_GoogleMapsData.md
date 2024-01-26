@@ -136,6 +136,8 @@ plt.show()
 
 ![comcat](/img/posts/GoogleMaps/barplot_by_comcat.png)<!-- -->
 
+We can see that a majority of the companies in Sillicon Valley are categorized as software developers (n=109). Also 22 company HQs are located here according to Google maps.
+
 
 <br>
 
@@ -187,6 +189,8 @@ plt.show()
 
 ![rating](/img/posts/GoogleMaps/avgratingvycomcat.png)<!-- -->
 
+Computer services, IT and Tech consultants do have the highest average rating. Lowest rating are for consultants in general and for repair services. But note that the standard diviations are quite high. Interpret with caution!
+
 <br>
 
 Here are the summary statistics for the upper plot.
@@ -212,7 +216,7 @@ print(summary_stats_ratings)
 
 <br>
 
-We also plot the Cumulative Distribution Function (CDF) Plot cause its helpful to understand the proportion of observations below a certain value. The plot shows us that only around 13% of ratings were 4 or less and nearly 70% gave a rating of 5.
+We also plot the Cumulative Distribution Function (CDF) Plot cause its helpful to understand the proportion of observations below a certain value.
 
 ``` r
 # Cumulative Distribution Function (CDF)
@@ -232,6 +236,8 @@ plt.show()
 ```
 
 ![CDF](/img/posts/GoogleMaps/CDF.png)<!-- -->
+
+ The plot shows us that only around 13% of ratings were 4 or less and nearly 70% gave a rating of 5.
 
 <br>
 
@@ -261,7 +267,11 @@ plt.show()
 ```
 ![NOR](/img/posts/GoogleMaps/numberofreviews.png)<!-- -->
 
+We see that GooglePlex has a lot more reviews than the other companies. Googleplex having around 10k reviews followed by KaspPro with 581 reviews. Googleplex is clearly an outlier in this category.
+
 <br>
+
+### Correlation analysis
 
 As a plus we will also check if the Google rating is correlated to the number of reviews. But before we do, we check for normality via QQ plot.
 
@@ -426,14 +436,6 @@ And here is the result:
   </div>
 </body>
 
-<iframe class= "HM" id = 'HM_SV' src="/img/posts/GoogleMaps/heatmap_without_outliers.html"
-    sandbox="allow-same-origin allow-scripts"
-    width="1210"
-    height="800"
-    scrolling='no'
-    seamless
-    frameborder="0">
-</iframe>
 
 We can see that around the city center and the airport there is the highest desntiy of tech companies. In case you want to build your own tech empire, you would be well advised to settle somewhere there (if affordable).
 
