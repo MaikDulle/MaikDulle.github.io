@@ -13,7 +13,7 @@ You can use the Google Maps Scraper (https://github.com/omkarcloud/google-maps-s
 
 For this example we will scrape data about tech companies from Sillicon Valley (Mountain View, California). Lets see how many companies there are and how they are rated on Google Maps.
 
-Here my search query:
+Here is my search query:
 
 ![query](/img/posts/GoogleMaps/querie.png)<!-- -->
 
@@ -39,7 +39,14 @@ Note that category and services are in german due to my chrome settings. My goal
 ### Requirements
 ``` r
 import pandas as pd
-import gmaps
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+import scipy.stats as stats
+from scipy.stats import spearmanr
+import folium
+from folium.plugins import HeatMap
+from scipy.stats import zscore
 ```
 
 <br>
@@ -52,7 +59,6 @@ GMD = pd.read_csv("Your/Path/Where/Data/Is/Stored.csv")
 GMD = pd.DataFrame(GMD)
 GMD
 ```
-<br>
 
 ``` r
 GMD = GMD.drop_duplicates(subset='name', keep='first') #remove dublicates firms
@@ -138,6 +144,7 @@ plt.show()
 
 We can see that a majority of the companies in Sillicon Valley are categorized as software developers (n=109). Also 22 company HQs are located here according to Google maps.
 
+---
 
 <br>
 
@@ -191,9 +198,7 @@ plt.show()
 
 Computer services, IT and Tech consultants do have the highest average rating. Lowest rating are for consultants in general and for repair services. But note that the standard diviations are quite high. Interpret with caution!
 
-<br>
-
-Here are the summary statistics for the upper plot.
+Further, some summary statistics for the upper plot.
 
 ``` r
 # Calculate summary statistics for the 'value' column
@@ -213,6 +218,10 @@ print(summary_stats_ratings)
   <li>75%       5.000000</li>
   <li>max       5.000000</li>
 </ul> 
+
+We see that 95 companies where taking into account. The mean is 4.39, standard diviation is 0.83 and the median is 4.70.
+
+---
 
 <br>
 
@@ -239,8 +248,9 @@ plt.show()
 
  The plot shows us that only around 13% of ratings were 4 or less and nearly 70% gave a rating of 5.
 
-<br>
+---
 
+<br>
 
 Third, we will have a look at the number of ratings. We use the simple barplot for the job.
 
@@ -294,6 +304,8 @@ plt.show()
 ![QQ](/img/posts/GoogleMaps/QQplot.png)<!-- -->
 
 We see in the plots that the normality assumption is violated. We will therefore take a non-parametric test (spearman) of correlation.
+
+---
 
 <br>
 
