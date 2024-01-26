@@ -35,14 +35,39 @@ rather inspired by a cool project you can find here:
 
 ## Spread model
 
-<iframe id = 'SIR-zombies' src="/img/posts/zombies-in-bremen/Bremen_outbreak.gif"
-    sandbox="allow-same-origin allow-scripts"
-    width="860"
-    height="570"
-    scrolling='no'
-    seamless
-    frameborder="0">
-</iframe>
+<style>
+  /* Container to control the size of the iframe */
+  .iframe-container {
+    position: relative;
+    overflow: hidden;
+    /* Set the aspect ratio (width:height) of your iframe */
+    padding-top: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+  }
+
+  /* Make the iframe fill the container */
+  .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+<body>
+
+  <!-- Container div for the iframe -->
+  <div class="iframe-container">
+      <!-- Your iframe goes here -->
+    <iframe 
+      class="responsive-iframe"
+      id = 'SIR-zombies' 
+      src="/img/posts/zombies-in-bremen/Bremen_outbreak.gif" 
+      frameborder="0" allowfullscreen>
+    </iframe>
+  </div>
+</body>
+
 
 The city center would quickly turn into a zombie stronghold and would no longer be safe.
 
