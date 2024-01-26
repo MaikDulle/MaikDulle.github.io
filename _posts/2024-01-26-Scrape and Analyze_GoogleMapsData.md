@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Lets explore Sillicon Valley in a different way!"
+title: "Let's explore Sillicon Valley in a different way!"
 subtitle: "Scrape and analyze Google Maps Data"
 background: '/img/posts/GoogleMaps/mapoftheworld.png'
 ---
@@ -449,7 +449,7 @@ And here is the result:
 </body>
 
 
-We can see that around the city center and the airport there is the highest desntiy of tech companies. In case you want to build your own tech empire, you would be well advised to settle somewhere there (if affordable).
+We can see that around the city center and the airport there is the highest density of tech companies. In case you want to build your own tech empire, you would be well advised to settle somewhere there (if affordable).
 
 <br>
 
