@@ -34,3 +34,5 @@ The art isn't in choosing one layer. It's knowing when which lens delivers the g
         frameborder="0" 
         style="border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
 </iframe>
+
+Hope you had as much fun with this post than I did generating the Segmentation Lens :)
