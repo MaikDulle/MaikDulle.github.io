@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Segmentation Lens</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #FAFAFA;
+            color: #1F2937;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        /* Language Toggle */
+        .lang-toggle {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 1000;
+            display: flex;
+            background: white;
+            border-radius: 20px;
+            padding: 4px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .lang-btn {
+            padding: 6px 14px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            border-radius: 16px;
+            transition: all 0.2s;
+            color: #6B7280;
+        }
+        
+        .lang-btn.active {
+            background: #005F73;
+            color: white;
+        }
+        
+        .lang-btn:hover:not(.active) {
+            background: #F3F4F6;
+        }
+        
+        /* Initiative Frame */
+        .initiative-frame {
+            background: linear-gradient(135deg, #001219 0%, #005F73 100%);
+            border-radius: 20px;
+            padding: 35px 30px;
+            margin-bottom: 25px;
+            color: white;
+        }
+        
+        .initiative-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .initiative-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.7;
+            margin-bottom: 8px;
+        }
+        
+        .initiative-header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        /* Problem Section */
+        .problem-section {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 14px;
+            padding: 25px;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+        
+        .section-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            opacity: 0.7;
+            margin-bottom: 12px;
+        }
+        
+        .problem-headline {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .problem-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .problem-voice {
+            background: rgba(255,255,255,0.08);
+            padding: 12px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        
+        .voice-who {
+            color: #94D2BD;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 4px;
+            font-size: 12px;
+        }
+        
+        .voice-what {
+            opacity: 0.95;
+        }
+        
+        .problem-punchline {
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            color: #94D2BD;
+        }
+        
+        /* Answer Section */
+        .answer-section {
+            text-align: center;
+            margin-bottom: 25px;
+            padding: 30px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        
+        .answer-section .section-label {
+            color: #0A9396;
+            font-weight: 600;
+            opacity: 1;
+        }
+        
+        .answer-text {
+            font-size: 18px;
+            color: #374151;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .answer-text strong {
+            color: #0A9396;
+        }
+        
+        .answer-section h2 {
+            font-size: 28px;
+            color: #001219;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+        
+        .answer-subtitle {
+            font-size: 15px;
+            color: #6B7280;
+            margin: 0;
+        }
+        
+        /* Outcome Section */
+        .outcome-section {
+            margin-bottom: 30px;
+        }
+        
+        .outcome-section .section-label {
+            text-align: center;
+            color: #374151;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        
+        .outcome-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        
+        .outcome-card {
+            background: white;
+            border-radius: 14px;
+            padding: 22px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 4px solid;
+        }
+        
+        .outcome-card.intern {
+            border-color: #0A9396;
+        }
+        
+        .outcome-card.extern {
+            border-color: #005F73;
+        }
+        
+        .outcome-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .outcome-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #6B7280;
+            margin-bottom: 8px;
+        }
+        
+        .outcome-text {
+            font-size: 15px;
+            color: #1F2937;
+            line-height: 1.5;
+        }
+        
+        .outcome-text strong {
+            color: #0A9396;
+        }
+        
+        /* Practice Section */
+        .practice-section {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        
+        .practice-section .section-label {
+            text-align: center;
+            color: #0A9396;
+            font-weight: 600;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 5px;
+        }
+        
+        .practice-subtitle {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1F2937;
+            margin-bottom: 20px;
+        }
+        
+        .practice-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        
+        .practice-card {
+            background: #F9FAFB;
+            border-radius: 12px;
+            padding: 18px;
+            text-align: center;
+        }
+        
+        .practice-card-highlight {
+            background: linear-gradient(135deg, #F0FDF4 0%, #E0F4F5 100%);
+            border: 2px solid #0A9396;
+            grid-column: 1 / -1;
+        }
+        
+        .practice-who {
+            font-weight: 600;
+            font-size: 15px;
+            color: #374151;
+            margin-bottom: 12px;
+        }
+        
+        .practice-layers {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            justify-content: center;
+        }
+        
+        .practice-layer {
+            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+        
+        /* Toggle Buttons */
+        .toggle-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .toggle-btn {
+            padding: 12px 28px;
+            background-color: #0A9396;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.2s;
+            margin: 0 8px;
+        }
+        
+        .toggle-btn:hover {
+            background-color: #005F73;
+            transform: translateY(-1px);
+        }
+        
+        .toggle-btn.active {
+            background-color: #005F73;
+        }
+        
+        /* Pyramid Container */
+        .pyramid-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 35px;
+            position: relative;
+            padding: 20px 0;
+        }
+        
+        .pyramid-line {
+            display: none;
+        }
+        
+        /* Layer Cards */
+        .layer-card {
+            padding: 20px 25px;
+            background-color: white;
+            border-radius: 14px;
+            margin-bottom: 14px;
+            cursor: pointer;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 2px solid;
+            transition: all 0.25s ease;
+            z-index: 1;
+            position: relative;
+            text-align: center;
+        }
+        
+        .layer-card:hover {
+            transform: translateY(-2px);
+        }
+        
+        .layer-card.active {
+            color: white !important;
+        }
+        
+        .layer-card .icon {
+            font-size: 26px;
+            margin-bottom: 5px;
+        }
+        
+        .layer-card .name {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .layer-card .subtitle {
+            font-size: 13px;
+            opacity: 0.8;
+            margin-top: 3px;
+        }
+        
+        /* Top level row for Strategic + Theoretical */
+        .top-level-row {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            margin-bottom: 14px;
+            z-index: 1;
+            position: relative;
+        }
+        
+        .top-level-row .layer-card {
+            margin-bottom: 0;
+            width: 220px;
+        }
+        
+        /* Layer specific colors */
+        .layer-strategic { border-color: #7C3AED; color: #7C3AED; }
+        .layer-strategic.active { background-color: #7C3AED; box-shadow: 0 8px 25px rgba(124,58,237,0.4); }
+        
+        .layer-theoretical { border-color: #001219; color: #001219; width: 220px; }
+        .layer-theoretical.active { background-color: #001219; box-shadow: 0 8px 25px rgba(0,18,25,0.4); }
+        
+        .layer-statistical { border-color: #005F73; color: #005F73; width: 320px; }
+        .layer-statistical.active { background-color: #005F73; box-shadow: 0 8px 25px rgba(0,95,115,0.4); }
+        
+        .layer-attribute { border-color: #0A9396; color: #0A9396; width: 400px; }
+        .layer-attribute.active { background-color: #0A9396; box-shadow: 0 8px 25px rgba(10,147,150,0.4); }
+        
+        .layer-intuitive { border-color: #94D2BD; color: #2D6A4F; width: 480px; }
+        .layer-intuitive.active { background-color: #94D2BD; color: white; box-shadow: 0 8px 25px rgba(148,210,189,0.4); }
+        
+        /* Detail Panel */
+        .detail-panel {
+            background-color: white;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            display: none;
+            border-top: 4px solid;
+        }
+        
+        .detail-panel.visible {
+            display: block;
+        }
+        
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 22px;
+        }
+        
+        .detail-item label {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #6B7280;
+            letter-spacing: 0.5px;
+            display: block;
+            margin-bottom: 6px;
+        }
+        
+        .detail-item.strength label { color: #10B981; }
+        .detail-item.weakness label { color: #EF4444; }
+        
+        .detail-item .value {
+            font-size: 14px;
+            color: #1F2937;
+        }
+        
+        .detail-item .value.italic {
+            font-style: italic;
+        }
+        
+        .detail-item .value.code {
+            font-family: monospace;
+            background-color: #F3F4F6;
+            padding: 8px 12px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+        
+        .cruise-example {
+            margin-top: 22px;
+            padding: 18px;
+            border-radius: 12px;
+        }
+        
+        .cruise-example label {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #6B7280;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .cruise-example .value {
+            font-size: 14px;
+            color: #374151;
+        }
+        
+        /* Key Message */
+        .key-message {
+            background-color: #001219;
+            color: white;
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .key-message .label {
+            font-size: 14px;
+            opacity: 0.85;
+            margin-bottom: 12px;
+        }
+        
+        .key-message .main {
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+        
+        .key-message .highlight {
+            color: #94D2BD;
+        }
+        
+        .key-message .sub {
+            font-size: 15px;
+            margin-top: 18px;
+            opacity: 0.9;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+        }
+        
+        /* Story Mode */
+        .story-container {
+            display: none;
+        }
+        
+        .story-container.visible {
+            display: block;
+        }
+        
+        .story-card {
+            background-color: white;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .story-card .scene-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+        
+        .story-card .scene-title {
+            font-size: 20px;
+            color: #001219;
+            margin-bottom: 18px;
+            font-weight: 600;
+        }
+        
+        .story-card .scene-text {
+            font-size: 17px;
+            color: #333;
+            line-height: 1.7;
+            max-width: 520px;
+            margin: 0 auto 25px;
+            min-height: 60px;
+        }
+        
+        .progress-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 22px;
+        }
+        
+        .progress-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #D1D5DB;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .progress-dot.active {
+            background-color: #0A9396;
+            transform: scale(1.2);
+        }
+        
+        .progress-dot:hover {
+            background-color: #94D2BD;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .nav-btn {
+            padding: 10px 24px;
+            background-color: #005F73;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        
+        .nav-btn:hover {
+            background-color: #0A9396;
+        }
+        
+        .nav-btn:disabled {
+            background-color: #E5E7EB;
+            color: #9CA3AF;
+            cursor: default;
+        }
+        
+        .story-highlight {
+            margin-top: 25px;
+            padding: 18px;
+            border-radius: 12px;
+            border-left: 4px solid;
+            text-align: left;
+        }
+        
+        .story-highlight .highlight-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .story-highlight .highlight-icon {
+            font-size: 22px;
+        }
+        
+        .story-highlight .highlight-name {
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            font-size: 13px;
+            color: #9CA3AF;
+            padding-top: 10px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 900px) {
+            .practice-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .practice-card-highlight {
+                grid-column: 1 / -1;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .top-level-row {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .top-level-row .layer-card {
+                width: 200px;
+                margin-bottom: 14px;
+            }
+            
+            .layer-statistical { width: 240px; }
+            .layer-attribute { width: 280px; }
+            .layer-intuitive { width: 320px; }
+            
+            .initiative-header h1 {
+                font-size: 28px;
+            }
+            
+            .problem-headline {
+                font-size: 18px;
+            }
+            
+            .problem-examples {
+                grid-template-columns: 1fr;
+            }
+            
+            .answer-section h2 {
+                font-size: 22px;
+            }
+            
+            .key-message .main {
+                font-size: 18px;
+            }
+            
+            .outcome-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .practice-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .practice-card-highlight {
+                grid-column: 1;
+            }
+            
+            .lang-toggle {
+                position: relative;
+                top: 0;
+                left: 0;
+                margin-bottom: 15px;
+                display: inline-flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+        <button class="lang-btn active" id="lang-en" onclick="setLanguage('en')">EN</button>
+        <button class="lang-btn" id="lang-de" onclick="setLanguage('de')">DE</button>
+    </div>
+
+    <div class="container">
+        <!-- Initiative Header -->
+        <div class="initiative-frame">
+            <div class="initiative-header">
+                <div class="initiative-label" data-en="Initiative" data-de="Initiative">Initiative</div>
+                <h1 data-en="Segmentation" data-de="Segmentierung">Segmentation</h1>
+            </div>
+            
+            <!-- Das Problem -->
+            <div class="problem-section">
+                <div class="section-label" data-en="The Problem" data-de="Das Problem">The Problem</div>
+                <div class="problem-headline" data-en="&quot;Segmentation? Everyone understands something different.&quot;" data-de="&quot;Segmentierung? Jeder versteht etwas anderes.&quot;">"Segmentation? Everyone understands something different."</div>
+                <div class="problem-examples">
+                    <div class="problem-voice">
+                        <span class="voice-who">Marketing & Media:</span>
+                        <span class="voice-what" data-en="&quot;The families, the couples, the best agers&quot;" data-de="&quot;Die Familien, die Paare, die Best Ager&quot;">"The families, the couples, the best agers"</span>
+                    </div>
+                    <div class="problem-voice">
+                        <span class="voice-who">CRM & E-Commerce:</span>
+                        <span class="voice-what" data-en="&quot;Everyone with revenue over €5,000&quot;" data-de="&quot;Alle mit Umsatz über 5.000€&quot;">"Everyone with revenue over €5,000"</span>
+                    </div>
+                    <div class="problem-voice">
+                        <span class="voice-who">Data Science:</span>
+                        <span class="voice-what" data-en="&quot;Cluster 6 from K-Means&quot;" data-de="&quot;Cluster 6 aus K-Means&quot;">"Cluster 6 from K-Means"</span>
+                    </div>
+                    <div class="problem-voice">
+                        <span class="voice-who" data-en="Strategy:" data-de="Strategie:">Strategy:</span>
+                        <span class="voice-what" data-en="&quot;The new customers&quot;" data-de="&quot;Die Neukunden&quot;">"The new customers"</span>
+                    </div>
+                    <div class="problem-voice">
+                        <span class="voice-who" data-en="Market Research:" data-de="Marktforschung:">Market Research:</span>
+                        <span class="voice-what" data-en="&quot;The RFM segments&quot;" data-de="&quot;Die RFM-Segmente&quot;">"The RFM segments"</span>
+                    </div>
+                </div>
+                <div class="problem-punchline" data-en="Everyone is right – but we speak different languages." data-de="Alle haben recht – aber wir sprechen unterschiedliche Sprachen.">Everyone is right – but we speak different languages.</div>
+            </div>
+        </div>
+        
+        <!-- Die Antwort -->
+        <div class="answer-section">
+            <div class="section-label" data-en="The Answer" data-de="Die Antwort">The Answer</div>
+            <div class="answer-text" data-en="Not <em>one</em> definition for all – but a <strong>shared vocabulary across different levels</strong>." data-de="Nicht <em>eine</em> Definition für alle – sondern ein <strong>gemeinsames Vokabular auf verschiedenen Ebenen</strong>.">Not <em>one</em> definition for all – but a <strong>shared vocabulary across different levels</strong>.</div>
+            <p class="answer-subtitle" data-en="What can help with this?!" data-de="Was dabei helfen kann?!">What can help with this?!</p>
+            <h2>🔍 <span data-en="The Segmentation Lens" data-de="Die Segmentierungs-Linse">The Segmentation Lens</span></h2>
+            <p class="answer-subtitle" data-en="Creating manageable order from overwhelming variety" data-de="Aus überwältigender Vielfalt handhabbare Ordnung schaffen">Creating manageable order from overwhelming variety</p>
+        </div>
+        
+        <!-- Toggle Buttons -->
+        <div class="toggle-container">
+            <button class="toggle-btn active" id="btn-framework" onclick="showFramework()">📊 Framework</button>
+            <button class="toggle-btn" id="btn-story" onclick="showStory()">🚢 Storyline</button>
+        </div>
+        
+        <!-- Framework View -->
+        <div id="framework-view">
+            <!-- Pyramid -->
+            <div class="pyramid-container">
+                <div class="pyramid-line"></div>
+                
+                <!-- Top level: Two cards side by side -->
+                <div class="top-level-row">
+                    <div class="layer-card layer-strategic" onclick="toggleLayer('strategic')" id="card-strategic">
+                        <div class="icon">🎯</div>
+                        <div class="name" data-en="Strategic" data-de="Strategisch">Strategic</div>
+                        <div class="subtitle" data-en="The Business Logic" data-de="Die Geschäftslogik">The Business Logic</div>
+                    </div>
+                    <div class="layer-card layer-theoretical" onclick="toggleLayer('theoretical')" id="card-theoretical">
+                        <div class="icon">📚</div>
+                        <div class="name" data-en="Theoretical-Model-Based" data-de="Theoretisch-Modellbasiert">Theoretical-Model-Based</div>
+                        <div class="subtitle" data-en="The Scientific Foundation" data-de="Das wissenschaftliche Fundament">The Scientific Foundation</div>
+                    </div>
+                </div>
+                
+                <div class="layer-card layer-statistical" onclick="toggleLayer('statistical')" id="card-statistical">
+                    <div class="icon">🔬</div>
+                    <div class="name" data-en="Statistical-Analytical" data-de="Statistisch-Analytisch">Statistical-Analytical</div>
+                    <div class="subtitle" data-en="The Data Intelligence" data-de="Die Daten-Intelligenz">The Data Intelligence</div>
+                </div>
+                
+                <div class="layer-card layer-attribute" onclick="toggleLayer('attribute')" id="card-attribute">
+                    <div class="icon">📊</div>
+                    <div class="name" data-en="Attribute-Based" data-de="Merkmals-basiert">Attribute-Based</div>
+                    <div class="subtitle" data-en="The Rule Logic" data-de="Die Regel-Logik">The Rule Logic</div>
+                </div>
+                
+                <div class="layer-card layer-intuitive" onclick="toggleLayer('intuitive')" id="card-intuitive">
+                    <div class="icon">💬</div>
+                    <div class="name" data-en="Intuitive-Linguistic" data-de="Intuitiv-Sprachlich">Intuitive-Linguistic</div>
+                    <div class="subtitle" data-en="The Everyday Understanding" data-de="Das Alltagsverständnis">The Everyday Understanding</div>
+                </div>
+            </div>
+            
+            <!-- Detail Panels -->
+            <div class="detail-panel" id="detail-strategic" style="border-color: #7C3AED;">
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <label data-en="Guiding Question" data-de="Leitfrage">Guiding Question</label>
+                        <div class="value italic" data-en="&quot;What business logic is behind it?&quot;" data-de="&quot;Welche Geschäftslogik steckt dahinter?&quot;">"What business logic is behind it?"</div>
+                    </div>
+                    <div class="detail-item">
+                        <label data-en="Example" data-de="Beispiel">Example</label>
+                        <div class="value code" data-en="New customers, Existing customers, Reactivation" data-de="Neukunden, Bestandskunden, Reaktivierung">New customers, Existing customers, Reactivation</div>
+                    </div>
+                    <div class="detail-item strength">
+                        <label data-en="✓ Strength" data-de="✓ Stärke">✓ Strength</label>
+                        <div class="value" data-en="Directly actionable, understood company-wide" data-de="Direkt handlungsrelevant, unternehmensweit verstanden">Directly actionable, understood company-wide</div>
+                    </div>
+                    <div class="detail-item weakness">
+                        <label data-en="⚠ Weakness" data-de="⚠ Schwäche">⚠ Weakness</label>
+                        <div class="value" data-en="Definitions vary depending on context" data-de="Definitionen variieren je nach Kontext">Definitions vary depending on context</div>
+                    </div>
+                </div>
+                <div class="cruise-example" style="background-color: #F3E8FF;">
+                    <label data-en="🚢 Cruise Example" data-de="🚢 Kreuzfahrt-Beispiel">🚢 Cruise Example</label>
+                    <div class="value" data-en="Strategy defines: &quot;New customer = has only booked with us once&quot;" data-de="Strategie definiert: &quot;Neukunde = hat erst einmal bei uns gebucht&quot;">Strategy defines: "New customer = has only booked with us once"</div>
+                </div>
+            </div>
+            
+            <div class="detail-panel" id="detail-theoretical" style="border-color: #001219;">
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <label data-en="Guiding Question" data-de="Leitfrage">Guiding Question</label>
+                        <div class="value italic" data-en="&quot;Which proven frameworks fit?&quot;" data-de="&quot;Welche bewährten Frameworks passen?&quot;">"Which proven frameworks fit?"</div>
+                    </div>
+                    <div class="detail-item">
+                        <label data-en="Example" data-de="Beispiel">Example</label>
+                        <div class="value code" data-en="Sinus Milieus, RFM Model" data-de="Sinus-Milieus, RFM-Modell">Sinus Milieus, RFM Model</div>
+                    </div>
+                    <div class="detail-item strength">
+                        <label data-en="✓ Strength" data-de="✓ Stärke">✓ Strength</label>
+                        <div class="value" data-en="Validated, transferable, well-founded" data-de="Validiert, übertragbar, fundiert">Validated, transferable, well-founded</div>
+                    </div>
+                    <div class="detail-item weakness">
+                        <label data-en="⚠ Weakness" data-de="⚠ Schwäche">⚠ Weakness</label>
+                        <div class="value" data-en="Generic, adaptation needed" data-de="Generisch, Anpassung nötig">Generic, adaptation needed</div>
+                    </div>
+                </div>
+                <div class="cruise-example" style="background-color: #E6E7E8;">
+                    <label data-en="🚢 Cruise Example" data-de="🚢 Kreuzfahrt-Beispiel">🚢 Cruise Example</label>
+                    <div class="value" data-en="Research shows: These clusters correspond to known travel types from customer lifetime value literature." data-de="Forschung zeigt: Diese Cluster entsprechen bekannten Reisetypen aus der Customer-Lifetime-Value-Literatur.">Research shows: These clusters correspond to known travel types from customer lifetime value literature.</div>
+                </div>
+            </div>
+            
+            <div class="detail-panel" id="detail-statistical" style="border-color: #005F73;">
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <label data-en="Guiding Question" data-de="Leitfrage">Guiding Question</label>
+                        <div class="value italic" data-en="&quot;Which groups actually exist in the data?&quot;" data-de="&quot;Welche Gruppen existieren wirklich in den Daten?&quot;">"Which groups actually exist in the data?"</div>
+                    </div>
+                    <div class="detail-item">
+                        <label data-en="Example" data-de="Beispiel">Example</label>
+                        <div class="value code" data-en="K-Means Clustering, Latent Class" data-de="K-Means Clustering, Latent Class">K-Means Clustering, Latent Class</div>
+                    </div>
+                    <div class="detail-item strength">
+                        <label data-en="✓ Strength" data-de="✓ Stärke">✓ Strength</label>
+                        <div class="value" data-en="Finds hidden patterns" data-de="Findet versteckte Muster">Finds hidden patterns</div>
+                    </div>
+                    <div class="detail-item weakness">
+                        <label data-en="⚠ Weakness" data-de="⚠ Schwäche">⚠ Weakness</label>
+                        <div class="value" data-en="Complex, &quot;black box&quot; risk" data-de="Komplex, &quot;Black Box&quot;-Gefahr">Complex, "black box" risk</div>
+                    </div>
+                </div>
+                <div class="cruise-example" style="background-color: #E6EEF0;">
+                    <label data-en="🚢 Cruise Example" data-de="🚢 Kreuzfahrt-Beispiel">🚢 Cruise Example</label>
+                    <div class="value" data-en="The algorithm finds: 7 distinct customer types with similar booking behavior." data-de="Der Algorithmus findet: 7 distinkte Kundentypen mit ähnlichem Buchungsverhalten.">The algorithm finds: 7 distinct customer types with similar booking behavior.</div>
+                </div>
+            </div>
+            
+            <div class="detail-panel" id="detail-attribute" style="border-color: #0A9396;">
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <label data-en="Guiding Question" data-de="Leitfrage">Guiding Question</label>
+                        <div class="value italic" data-en="&quot;By which criterion do I divide?&quot;" data-de="&quot;Nach welchem Kriterium teile ich?&quot;">"By which criterion do I divide?"</div>
+                    </div>
+                    <div class="detail-item">
+                        <label data-en="Example" data-de="Beispiel">Example</label>
+                        <div class="value code" data-en="Age &gt; 60, Revenue &gt; €5,000" data-de="Alter &gt; 60, Umsatz &gt; 5.000€">Age > 60, Revenue > €5,000</div>
+                    </div>
+                    <div class="detail-item strength">
+                        <label data-en="✓ Strength" data-de="✓ Stärke">✓ Strength</label>
+                        <div class="value" data-en="Clearly defined, reproducible" data-de="Klar definiert, reproduzierbar">Clearly defined, reproducible</div>
+                    </div>
+                    <div class="detail-item weakness">
+                        <label data-en="⚠ Weakness" data-de="⚠ Schwäche">⚠ Weakness</label>
+                        <div class="value" data-en="Simplifying, ignores complexity" data-de="Vereinfachend, ignoriert Komplexität">Simplifying, ignores complexity</div>
+                    </div>
+                </div>
+                <div class="cruise-example" style="background-color: #E0F4F5;">
+                    <label data-en="🚢 Cruise Example" data-de="🚢 Kreuzfahrt-Beispiel">🚢 Cruise Example</label>
+                    <div class="value" data-en="In CRM: &quot;Customers with booking value over €5,000 = Premium segment&quot;" data-de="Im CRM: &quot;Kunden mit Buchungswert über 5.000€ = Premium-Segment&quot;">In CRM: "Customers with booking value over €5,000 = Premium segment"</div>
+                </div>
+            </div>
+            
+            <div class="detail-panel" id="detail-intuitive" style="border-color: #94D2BD;">
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <label data-en="Guiding Question" data-de="Leitfrage">Guiding Question</label>
+                        <div class="value italic" data-en="&quot;Who do I actually mean?&quot;" data-de="&quot;Wen meine ich überhaupt?&quot;">"Who do I actually mean?"</div>
+                    </div>
+                    <div class="detail-item">
+                        <label data-en="Example" data-de="Beispiel">Example</label>
+                        <div class="value code" data-en="&quot;Families&quot;, &quot;Couples&quot;, &quot;Retirees&quot;" data-de="&quot;Familien&quot;, &quot;Paare&quot;, &quot;Rentner&quot;">"Families", "Couples", "Retirees"</div>
+                    </div>
+                    <div class="detail-item strength">
+                        <label data-en="✓ Strength" data-de="✓ Stärke">✓ Strength</label>
+                        <div class="value" data-en="Quick, intuitively understandable" data-de="Schnell, intuitiv verständlich">Quick, intuitively understandable</div>
+                    </div>
+                    <div class="detail-item weakness">
+                        <label data-en="⚠ Weakness" data-de="⚠ Schwäche">⚠ Weakness</label>
+                        <div class="value" data-en="Subjective, not validated" data-de="Subjektiv, nicht validiert">Subjective, not validated</div>
+                    </div>
+                </div>
+                <div class="cruise-example" style="background-color: #E8F5F1;">
+                    <label data-en="🚢 Cruise Example" data-de="🚢 Kreuzfahrt-Beispiel">🚢 Cruise Example</label>
+                    <div class="value" data-en="On the ship we see: &quot;Those are the best agers&quot;" data-de="Auf dem Schiff sehen wir: &quot;Das sind die Best Ager&quot;">On the ship we see: "Those are the best agers"</div>
+                </div>
+            </div>
+            
+            <!-- Zentrale Erkenntnis (identisch) -->
+            <div class="key-message">
+                <div class="label" data-en="The Key Insight" data-de="Die zentrale Erkenntnis">The Key Insight</div>
+                <div class="main" data-en="Segmentation is not a method –<br>it is a <span class='highlight'>spectrum of structuring</span>." data-de="Segmentierung ist keine Methode –<br>es ist ein <span class='highlight'>Spektrum der Strukturierung</span>.">Segmentation is not a method –<br>it is a <span class="highlight">spectrum of structuring</span>.</div>
+                <div class="sub" data-en="The art is not in choosing one level, but in knowing when which lens delivers the greatest value." data-de="Die Kunst liegt nicht darin, eine Ebene zu wählen, sondern zu wissen, wann welche Linse den größten Mehrwert liefert.">The art is not in choosing one level, but in knowing when which lens delivers the greatest value.</div>
+            </div>
+           
+            <!-- In der Praxis -->
+            <div class="practice-section">
+                <div class="section-label" data-en="In Practice" data-de="In der Praxis">In Practice</div>
+                <div class="practice-subtitle" data-en="Who uses which levels most frequently?" data-de="Wer bedient sich am häufigsten wo?">Who uses which levels most frequently?</div>
+                <div class="practice-cards">
+                    <div class="practice-card">
+                        <div class="practice-who">Marketing & Media</div>
+                        <div class="practice-layers">
+                            <span class="practice-layer" style="background-color: #94D2BD;" data-en="Intuitive" data-de="Intuitiv">Intuitive</span>
+                            <span class="practice-layer" style="background-color: #0A9396; color: white;" data-en="Attribute" data-de="Merkmal">Attribute</span>
+                        </div>
+                    </div>
+                    <div class="practice-card">
+                        <div class="practice-who">CRM & E-Commerce</div>
+                        <div class="practice-layers">
+                            <span class="practice-layer" style="background-color: #0A9396; color: white;" data-en="Attribute" data-de="Merkmal">Attribute</span>
+                            <span class="practice-layer" style="background-color: #005F73; color: white;" data-en="Statistical" data-de="Statistisch">Statistical</span>
+                        </div>
+                    </div>
+                    <div class="practice-card">
+                        <div class="practice-who" data-en="Sales" data-de="Vertrieb">Sales</div>
+                        <div class="practice-layers">
+                            <span class="practice-layer" style="background-color: #94D2BD;" data-en="Intuitive" data-de="Intuitiv">Intuitive</span>
+                            <span class="practice-layer" style="background-color: #0A9396; color: white;" data-en="Attribute" data-de="Merkmal">Attribute</span>
+                            <span class="practice-layer" style="background-color: #7C3AED; color: white;" data-en="Strategic" data-de="Strategisch">Strategic</span>
+                        </div>
+                    </div>
+                    <div class="practice-card">
+                        <div class="practice-who">Revenue Management</div>
+                        <div class="practice-layers">
+                            <span class="practice-layer" style="background-color: #0A9396; color: white;" data-en="Attribute" data-de="Merkmal">Attribute</span>
+                            <span class="practice-layer" style="background-color: #005F73; color: white;" data-en="Statistical" data-de="Statistisch">Statistical</span>
+                        </div>
+                    </div>
+                    <div class="practice-card">
+                        <div class="practice-who" data-en="Product" data-de="Produkt">Product</div>
+                        <div class="practice-layers">
+                            <span class="practice-layer" style="background-color: #94D2BD;" data-en="Intuitive" data-de="Intuitiv">Intuitive</span>
+                            <span class="practice-layer" style="background-color: #005F73; color: white;" data-en="Statistical" data-de="Statistisch">Statistical</span>
+                            <span class="practice-layer" style="background-color: #7C3AED; color: white;" data-en="Strategic" data-de="Strategisch">Strategic</span>
+                        </div>
+                    </div>
+                    <div class="practice-card">
+                        <div class="practice-who" data-en="Market Research" data-de="Marktforschung">Market Research</div>
+                        <div class="practice-layers">
+                            <span class="practice-layer" style="background-color: #005F73; color: white;" data-en="Statistical" data-de="Statistisch">Statistical</span>
+                            <span class="practice-layer" style="background-color: #001219; color: white;" data-en="Theoretical" data-de="Theoretisch">Theoretical</span>
+                        </div>
+                    </div>
+                    <div class="practice-card practice-card-highlight">
+                        <div class="practice-who" data-en="Strategy" data-de="Strategie">Strategy</div>
+                        <div class="practice-layers">
+                            <span class="practice-layer" style="background-color: #94D2BD;" data-en="Intuitive" data-de="Intuitiv">Intuitive</span>
+                            <span class="practice-layer" style="background-color: #0A9396; color: white;" data-en="Attribute" data-de="Merkmal">Attribute</span>
+                            <span class="practice-layer" style="background-color: #005F73; color: white;" data-en="Statistical" data-de="Statistisch">Statistical</span>
+                            <span class="practice-layer" style="background-color: #7C3AED; color: white;" data-en="Strategic" data-de="Strategisch">Strategic</span>
+                            <span class="practice-layer" style="background-color: #001219; color: white;" data-en="Theoretical" data-de="Theoretisch">Theoretical</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Was wir damit erreichen -->
+            <div class="outcome-section">
+                <div class="section-label" data-en="What We Achieve With This" data-de="Was wir damit erreichen">What We Achieve With This</div>
+                <div class="outcome-cards">
+                    <div class="outcome-card intern">
+                        <div class="outcome-icon">🏢</div>
+                        <div class="outcome-label" data-en="Internal" data-de="Intern">Internal</div>
+                        <div class="outcome-text" data-en="A shared language about the <strong>HOW</strong> of group classification – leverage synergies, avoid poor decisions." data-de="Gemeinsame Sprache über das <strong>WIE</strong> der Gruppeneinteilung – Synergien nutzen, Fehlentscheidungen vermeiden.">A shared language about the <strong>HOW</strong> of group classification – leverage synergies, avoid poor decisions.</div>
+                    </div>
+                    <div class="outcome-card extern">
+                        <div class="outcome-icon">🎯</div>
+                        <div class="outcome-label" data-en="External" data-de="Extern">External</div>
+                        <div class="outcome-text" data-en="Reach the <strong>right people</strong> with the <strong>right content</strong> at the <strong>right time</strong>." data-de="Die <strong>richtigen Personen</strong> mit den <strong>richtigen Inhalten</strong> zur <strong>richtigen Zeit</strong> ansprechen.">Reach the <strong>right people</strong> with the <strong>right content</strong> at the <strong>right time</strong>.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Story View -->
+        <div class="story-container" id="story-view">
+            <div class="story-card">
+                <div class="scene-icon" id="story-icon">🚢</div>
+                <div class="scene-title" id="story-title">The Starting Point</div>
+                <div class="scene-text" id="story-text">
+                    3,999 people want to board your cruise ship. Ask 5 departments who these people are – you'll get 5 answers.
+                </div>
+                
+                <div class="progress-dots" id="progress-dots"></div>
+                
+                <div class="nav-buttons">
+                    <button class="nav-btn" id="btn-prev" onclick="prevStep()">← <span data-en="Back" data-de="Zurück">Back</span></button>
+                    <button class="nav-btn" id="btn-next" onclick="nextStep()"><span data-en="Next" data-de="Weiter">Next</span> →</button>
+                </div>
+                
+                <div class="story-highlight" id="story-highlight" style="display: none;"></div>
+            </div>
+            
+            <!-- Zentrale Erkenntnis (identisch) -->
+            <div class="key-message">
+                <div class="label" data-en="The Key Insight" data-de="Die zentrale Erkenntnis">The Key Insight</div>
+                <div class="main" data-en="Segmentation is not a method –<br>it is a <span class='highlight'>spectrum of structuring</span>." data-de="Segmentierung ist keine Methode –<br>es ist ein <span class='highlight'>Spektrum der Strukturierung</span>.">Segmentation is not a method –<br>it is a <span class="highlight">spectrum of structuring</span>.</div>
+                <div class="sub" data-en="The art is not in choosing one level, but in knowing when which lens delivers the greatest value." data-de="Die Kunst liegt nicht darin, eine Ebene zu wählen, sondern zu wissen, wann welche Linse den größten Mehrwert liefert.">The art is not in choosing one level, but in knowing when which lens delivers the greatest value.</div>
+            </div>
+        
+        <!-- Footer -->
+        <div class="footer" data-en="Segmentation Initiative • Click on the levels for details • Use &quot;Storyline&quot; for the narrative explanation" data-de="Initiative Segmentierung • Klicke auf die Ebenen für Details • Nutze &quot;Storyline&quot; für die narrative Erklärung">Segmentation Initiative • Click on the levels for details • Use "Storyline" for the narrative explanation</div>
+    </div>
+    
+    <script>
+        // Current language
+        let currentLang = 'en';
+        
+        // Data
+        const layers = {
+            en: {
+                intuitive: {
+                    color: '#94D2BD',
+                    lightColor: '#E8F5F1',
+                    icon: '💬',
+                    name: 'Intuitive-Linguistic'
+                },
+                attribute: {
+                    color: '#0A9396',
+                    lightColor: '#E0F4F5',
+                    icon: '📊',
+                    name: 'Attribute-Based'
+                },
+                statistical: {
+                    color: '#005F73',
+                    lightColor: '#E6EEF0',
+                    icon: '🔬',
+                    name: 'Statistical-Analytical'
+                },
+                strategic: {
+                    color: '#7C3AED',
+                    lightColor: '#F3E8FF',
+                    icon: '🎯',
+                    name: 'Strategic'
+                },
+                theoretical: {
+                    color: '#001219',
+                    lightColor: '#E6E7E8',
+                    icon: '📚',
+                    name: 'Theoretical-Model-Based'
+                }
+            },
+            de: {
+                intuitive: {
+                    color: '#94D2BD',
+                    lightColor: '#E8F5F1',
+                    icon: '💬',
+                    name: 'Intuitiv-Sprachlich'
+                },
+                attribute: {
+                    color: '#0A9396',
+                    lightColor: '#E0F4F5',
+                    icon: '📊',
+                    name: 'Merkmals-basiert'
+                },
+                statistical: {
+                    color: '#005F73',
+                    lightColor: '#E6EEF0',
+                    icon: '🔬',
+                    name: 'Statistisch-Analytisch'
+                },
+                strategic: {
+                    color: '#7C3AED',
+                    lightColor: '#F3E8FF',
+                    icon: '🎯',
+                    name: 'Strategisch'
+                },
+                theoretical: {
+                    color: '#001219',
+                    lightColor: '#E6E7E8',
+                    icon: '📚',
+                    name: 'Theoretisch-Modellbasiert'
+                }
+            }
+        };
+        
+        const storySteps = {
+            en: [
+                {
+                    icon: '🚢',
+                    title: 'The Starting Point',
+                    text: '3,999 people want to board your cruise ship. Ask 5 departments who these people are – you\'ll get 5 answers.',
+                    highlight: null
+                },
+                {
+                    icon: '📢',
+                    title: 'Marketing & Media',
+                    text: '"We target families, couples, and best agers – they immediately understand if they\'re meant."',
+                    highlight: 'intuitive'
+                },
+                {
+                    icon: '💻',
+                    title: 'CRM & E-Commerce',
+                    text: '"For us what counts is: Booking value over €5,000 = Premium segment. We can filter that in the system and target them specifically."',
+                    highlight: 'attribute'
+                },
+                {
+                    icon: '📊',
+                    title: 'Revenue Management',
+                    text: '"The algorithm finds 7 clusters with significantly different booking behavior."',
+                    highlight: 'statistical'
+                },
+                {
+                    icon: '🎯',
+                    title: 'Strategy',
+                    text: '"New customers are everyone who has only booked once – we need to specifically develop them toward a second booking."',
+                    highlight: 'strategic'
+                },
+                {
+                    icon: '🎓',
+                    title: 'Market Research',
+                    text: '"These groups correspond to the RFM segments from customer lifetime value research."',
+                    highlight: 'theoretical'
+                },
+                {
+                    icon: '💡',
+                    title: 'The Core Message',
+                    text: 'Everyone is right. The problem is not WHO is right, but that we speak different languages and operate on different levels.',
+                    highlight: null
+                }
+            ],
+            de: [
+                {
+                    icon: '🚢',
+                    title: 'Die Ausgangslage',
+                    text: '3.999 Menschen wollen auf dein Kreuzfahrtschiff. Frag 5 Abteilungen, wer diese Menschen sind – du bekommst 5 Antworten.',
+                    highlight: null
+                },
+                {
+                    icon: '📢',
+                    title: 'Marketing & Media',
+                    text: '"Wir sprechen Familien, Paare und Best Ager an – die verstehen sofort, ob sie gemeint sind."',
+                    highlight: 'intuitive'
+                },
+                {
+                    icon: '💻',
+                    title: 'CRM & E-Commerce',
+                    text: '"Für uns zählt: Buchungswert über 5.000€ = Premium-Segment. Das können wir im System filtern und gezielt ansprechen."',
+                    highlight: 'attribute'
+                },
+                {
+                    icon: '📊',
+                    title: 'Revenue Management',
+                    text: '"Der Algorithmus findet 7 Cluster mit signifikant unterschiedlichem Buchungsverhalten."',
+                    highlight: 'statistical'
+                },
+                {
+                    icon: '🎯',
+                    title: 'Strategie',
+                    text: '"Neukunden sind alle, die erst einmal gebucht haben – die müssen wir gezielt zur Zweitbuchung entwickeln."',
+                    highlight: 'strategic'
+                },
+                {
+                    icon: '🎓',
+                    title: 'Marktforschung',
+                    text: '"Diese Gruppen entsprechen den RFM-Segmenten aus der Customer-Lifetime-Value-Forschung."',
+                    highlight: 'theoretical'
+                },
+                {
+                    icon: '💡',
+                    title: 'Die Kernbotschaft',
+                    text: 'Alle haben recht. Das Problem ist nicht WER recht hat sondern dass wir unterschiedliche Sprachen sprechen und dabei auf verschiedenen Ebenen.',
+                    highlight: null
+                }
+            ]
+        };
+        
+        let currentStep = 0;
+        let activeLayer = null;
+        
+        // Language switching
+        function setLanguage(lang) {
+            currentLang = lang;
+            
+            // Update button states
+            document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+            document.getElementById('lang-de').classList.toggle('active', lang === 'de');
+            
+            // Update page title
+            document.title = lang === 'en' ? 'The Segmentation Lens' : 'Die Segmentierungs-Linse';
+            document.documentElement.lang = lang;
+            
+            // Update all translatable elements
+            document.querySelectorAll('[data-en][data-de]').forEach(el => {
+                const text = el.getAttribute('data-' + lang);
+                if (text) {
+                    el.innerHTML = text;
+                }
+            });
+            
+            // Update story view
+            updateStory();
+            
+            // Update next button text if on last step
+            const nextBtn = document.getElementById('btn-next');
+            if (currentStep === storySteps[currentLang].length - 1) {
+                nextBtn.innerHTML = lang === 'en' ? '📊 To Framework' : '📊 Zum Framework';
+            }
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            renderProgressDots();
+            updateStory();
+            setLanguage('en'); // Set English as default
+        });
+        
+        // View Toggle
+        function showFramework() {
+            document.getElementById('framework-view').style.display = 'block';
+            document.getElementById('story-view').classList.remove('visible');
+            document.getElementById('btn-framework').classList.add('active');
+            document.getElementById('btn-story').classList.remove('active');
+        }
+        
+        function showStory() {
+            document.getElementById('framework-view').style.display = 'none';
+            document.getElementById('story-view').classList.add('visible');
+            document.getElementById('btn-story').classList.add('active');
+            document.getElementById('btn-framework').classList.remove('active');
+        }
+        
+        // Layer Toggle
+        function toggleLayer(layerId) {
+            const allPanels = document.querySelectorAll('.detail-panel');
+            const allCards = document.querySelectorAll('.layer-card');
+            
+            if (activeLayer === layerId) {
+                // Close
+                document.getElementById('detail-' + layerId).classList.remove('visible');
+                document.getElementById('card-' + layerId).classList.remove('active');
+                activeLayer = null;
+            } else {
+                // Close all first
+                allPanels.forEach(p => p.classList.remove('visible'));
+                allCards.forEach(c => c.classList.remove('active'));
+                
+                // Open selected
+                document.getElementById('detail-' + layerId).classList.add('visible');
+                document.getElementById('card-' + layerId).classList.add('active');
+                activeLayer = layerId;
+            }
+        }
+        
+        // Story Navigation
+        function renderProgressDots() {
+            const container = document.getElementById('progress-dots');
+            container.innerHTML = '';
+            const steps = storySteps[currentLang];
+            steps.forEach((_, idx) => {
+                const dot = document.createElement('div');
+                dot.className = 'progress-dot' + (idx === currentStep ? ' active' : '');
+                dot.onclick = () => goToStep(idx);
+                container.appendChild(dot);
+            });
+        }
+        
+        function updateStory() {
+            const steps = storySteps[currentLang];
+            const layerData = layers[currentLang];
+            const step = steps[currentStep];
+            
+            document.getElementById('story-icon').textContent = step.icon;
+            document.getElementById('story-title').textContent = step.title;
+            document.getElementById('story-text').textContent = step.text;
+            
+            // Update dots
+            const dots = document.querySelectorAll('.progress-dot');
+            dots.forEach((dot, idx) => {
+                dot.classList.toggle('active', idx === currentStep);
+            });
+            
+            // Update buttons
+            document.getElementById('btn-prev').disabled = currentStep === 0;
+            const nextBtn = document.getElementById('btn-next');
+            if (currentStep === steps.length - 1) {
+                nextBtn.innerHTML = currentLang === 'en' ? '📊 To Framework' : '📊 Zum Framework';
+                nextBtn.disabled = false;
+            } else {
+                nextBtn.innerHTML = currentLang === 'en' ? '<span data-en="Next" data-de="Weiter">Next</span> →' : '<span data-en="Next" data-de="Weiter">Weiter</span> →';
+                nextBtn.disabled = false;
+            }
+            
+            // Update highlight
+            const highlightEl = document.getElementById('story-highlight');
+            if (step.highlight && layerData[step.highlight]) {
+                const layer = layerData[step.highlight];
+                highlightEl.style.display = 'block';
+                highlightEl.style.backgroundColor = layer.lightColor;
+                highlightEl.style.borderColor = layer.color;
+                highlightEl.innerHTML = `
+                    <div class="highlight-header">
+                        <span class="highlight-icon">${layer.icon}</span>
+                        <strong class="highlight-name" style="color: ${layer.color}">${layer.name}</strong>
+                    </div>
+                `;
+            } else {
+                highlightEl.style.display = 'none';
+            }
+        }
+        
+        function nextStep() {
+            const steps = storySteps[currentLang];
+            if (currentStep < steps.length - 1) {
+                currentStep++;
+                updateStory();
+            } else {
+                // Last step: go to framework
+                showFramework();
+                currentStep = 0;
+                updateStory();
+            }
+        }
+        
+        function prevStep() {
+            if (currentStep > 0) {
+                currentStep--;
+                updateStory();
+            }
+        }
+        
+        function goToStep(idx) {
+            currentStep = idx;
+            updateStory();
+        }
+    </script>
+</body>
+</html>
