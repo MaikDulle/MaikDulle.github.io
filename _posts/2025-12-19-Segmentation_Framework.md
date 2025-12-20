@@ -7,7 +7,11 @@ background: 'img/posts/SegmFramework/20251220_1827_Fun Customer Segmentation_sim
 
 ## Note: Use at your own risk. Be ethical about usage. Further, I am not a professional programmer/developer.
 
+---
+
 ## The Segmentation Lens: A Framework for Speaking the Same Language
+
+<br>
 
 ### Why 5 departments give 5 different answers – and how to tackle it
 
