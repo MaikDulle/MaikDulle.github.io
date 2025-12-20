@@ -28,7 +28,7 @@ Built to bridge the gap between data teams and business stakeholders. Fully bili
 The art isn't in choosing one layer. It's knowing when which lens delivers the greatest value. But see for yourself and if you like, give me feedback
 
 
-<iframe src="https://maikdulle.github.io/assets/segmentation-framework-bilingual.html" 
+<iframe src="MaikDulle/MaikDulle.github.io/assets/segmentation-framework-bilingual.html" 
         width="100%" 
         height="900px" 
         frameborder="0" 
