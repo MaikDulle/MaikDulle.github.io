@@ -2,7 +2,7 @@
 layout: post
 title: "The Segmentation Lens"
 subtitle: "A Framework for Speaking the Same Language"
-background: 'img/posts/SegmFramework/20251220_1827_Fun Customer Segmentation_simple_compose_01kcycs9swff78aesa1a2jyg66.png'
+background: '/img/posts/SegmFramework/20251220_1827_Fun Customer Segmentation_simple_compose_01kcycs9swff78aesa1a2jyg66.png'
 ---
 
 ## Note: Use at your own risk. Be ethical about usage. Further, I am not a professional programmer/developer.
@@ -28,7 +28,7 @@ Built to bridge the gap between data teams and business stakeholders. Fully bili
 The art isn't in choosing one layer. It's knowing when which lens delivers the greatest value. But see for yourself and if you like, give me feedback
 
 
-<iframe src="assets/segmentation-framework-bilingual.html" 
+<iframe src="/assets/segmentation-framework-bilingual.html" 
         width="100%" 
         height="900px" 
         frameborder="0" 
