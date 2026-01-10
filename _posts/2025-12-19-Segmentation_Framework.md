@@ -5,7 +5,7 @@ subtitle: "A Framework for Speaking the Same Language"
 background: '/img/posts/SegmFramework/20251220_1827_Fun Customer Segmentation_simple_compose_01kcycs9swff78aesa1a2jyg66.png'
 ---
 
-## Note: All nuermic values in this example are ficticious and sreve for the purpose of illustration only. Use at your own risk. Be ethical about usage. Further, I am not a professional programmer/developer.
+## Note: All numeric values in this example are ficticious and serve for the purpose of illustration only. Use at your own risk. Be ethical about usage. Further, I am not a professional programmer/developer.
 
 ---
 

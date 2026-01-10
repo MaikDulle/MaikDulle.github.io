@@ -315,6 +315,215 @@ layout: null
             border-radius: 12px;
             font-weight: 500;
         }
+
+        /* Example Button */
+        .example-btn-container {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .example-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, #005F73 0%, #0A9396 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(10, 147, 150, 0.3);
+        }
+
+        .example-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(10, 147, 150, 0.4);
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 18, 25, 0.85);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.visible {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 700px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #001219 0%, #005F73 100%);
+            color: white;
+            padding: 25px 30px;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .modal-header h3 {
+            margin: 0 0 5px 0;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .modal-header p {
+            margin: 0;
+            opacity: 0.8;
+            font-size: 14px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .modal-close:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.1);
+        }
+
+        .modal-body {
+            padding: 30px;
+        }
+
+        .modal-scenario {
+            font-size: 16px;
+            color: #374151;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .modal-scenario strong {
+            color: #001219;
+        }
+
+        .modal-table-container {
+            margin-bottom: 25px;
+        }
+
+        .modal-table-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #0A9396;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .modal-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .modal-table th {
+            background: #001219;
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .modal-table th:first-child {
+            border-radius: 8px 0 0 0;
+        }
+
+        .modal-table th:last-child {
+            border-radius: 0 8px 0 0;
+        }
+
+        .modal-table td {
+            padding: 14px 15px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .modal-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .modal-table tr:nth-child(even) {
+            background: #F9FAFB;
+        }
+
+        .modal-table .layer-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .modal-table .criteria-code {
+            font-family: monospace;
+            background: #F3F4F6;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .modal-resolution {
+            background: linear-gradient(135deg, #F0FDF4 0%, #E0F4F5 100%);
+            border: 2px solid #0A9396;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .modal-resolution-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #0A9396;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .modal-resolution-text {
+            color: #1F2937;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .modal-resolution-text strong {
+            color: #005F73;
+        }
         
         /* Toggle Buttons */
         .toggle-container {
@@ -721,6 +930,15 @@ layout: null
                 margin-bottom: 15px;
                 display: inline-flex;
             }
+
+            .modal-table {
+                font-size: 12px;
+            }
+
+            .modal-table th,
+            .modal-table td {
+                padding: 10px 8px;
+            }
         }
     </style>
 </head>
@@ -949,7 +1167,7 @@ layout: null
                 </div>
             </div>
             
-            <!-- Zentrale Erkenntnis (identisch) -->
+            <!-- Zentrale Erkenntnis -->
             <div class="key-message">
                 <div class="label" data-en="The Key Insight" data-de="Die zentrale Erkenntnis">The Key Insight</div>
                 <div class="main" data-en="Segmentation is not a method –<br>it is a <span class='highlight'>spectrum of structuring</span>." data-de="Segmentierung ist keine Methode –<br>es ist ein <span class='highlight'>Spektrum der Strukturierung</span>.">Segmentation is not a method –<br>it is a <span class="highlight">spectrum of structuring</span>.</div>
@@ -1016,6 +1234,12 @@ layout: null
                         </div>
                     </div>
                 </div>
+                <div class="example-btn-container">
+                    <button class="example-btn" onclick="openModal()">
+                        <span>🔍</span>
+                        <span data-en="See the Lens in Action" data-de="Die Linse in Aktion sehen">See the Lens in Action</span>
+                    </button>
+                </div>
             </div>
             
             <!-- Was wir damit erreichen -->
@@ -1025,7 +1249,7 @@ layout: null
                     <div class="outcome-card intern">
                         <div class="outcome-icon">🏢</div>
                         <div class="outcome-label" data-en="Internal" data-de="Intern">Internal</div>
-                        <div class="outcome-text" data-en="A shared language about the <strong>HOW</strong> of group classification – leverage synergies, avoid poor decisions." data-de="Gemeinsame Sprache über das <strong>WIE</strong> der Gruppeneinteilung – Synergien nutzen, Fehlentscheidungen vermeiden.">A shared language about the <strong>HOW</strong> of group classification – leverage synergies, avoid poor decisions.</div>
+                        <div class="outcome-text" data-en="A shared language and understanding about the <strong>HOW</strong> of group classification – leverage synergies, avoid poor decisions. At the same time we foster a culture of understanding where two things can equally right." data-de="Gemeinsame Sprache und Verständnis über das <strong>WIE</strong> der Gruppeneinteilung – Synergien nutzen, Fehlentscheidungen vermeiden. Gleichzeitig fördern wir so eine Arbeitskultur, in der zwei Dinge gleichzeitig als richtig angesehen werden.">A shared language about the <strong>HOW</strong> of group classification – leverage synergies, avoid poor decisions.</div>
                     </div>
                     <div class="outcome-card extern">
                         <div class="outcome-icon">🎯</div>
@@ -1055,15 +1279,71 @@ layout: null
                 <div class="story-highlight" id="story-highlight" style="display: none;"></div>
             </div>
             
-            <!-- Zentrale Erkenntnis (identisch) -->
+            <!-- Zentrale Erkenntnis -->
             <div class="key-message">
                 <div class="label" data-en="The Key Insight" data-de="Die zentrale Erkenntnis">The Key Insight</div>
                 <div class="main" data-en="Segmentation is not a method –<br>it is a <span class='highlight'>spectrum of structuring</span>." data-de="Segmentierung ist keine Methode –<br>es ist ein <span class='highlight'>Spektrum der Strukturierung</span>.">Segmentation is not a method –<br>it is a <span class="highlight">spectrum of structuring</span>.</div>
                 <div class="sub" data-en="The art is not in choosing one level, but in knowing when which lens delivers the greatest value." data-de="Die Kunst liegt nicht darin, eine Ebene zu wählen, sondern zu wissen, wann welche Linse den größten Mehrwert liefert.">The art is not in choosing one level, but in knowing when which lens delivers the greatest value.</div>
             </div>
+        </div>
         
         <!-- Footer -->
         <div class="footer" data-en="Segmentation Initiative • Click on the levels for details • Use &quot;Storyline&quot; for the narrative explanation" data-de="Initiative Segmentierung • Klicke auf die Ebenen für Details • Nutze &quot;Storyline&quot; für die narrative Erklärung">Segmentation Initiative • Click on the levels for details • Use "Storyline" for the narrative explanation</div>
+    </div>
+
+    <!-- Modal: The Lens in Action -->
+    <div class="modal-overlay" id="lens-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" onclick="closeModal()">×</button>
+                <h3 data-en="🔍 Resolving Vocabulary Conflicts" data-de="🔍 Begriffskonflikte auflösen">🔍 Resolving Vocabulary Conflicts</h3>
+                <p data-en="Same word, different meanings — made visible" data-de="Gleiches Wort, verschiedene Bedeutungen — sichtbar gemacht">Same word, different meanings — made visible</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-scenario" data-en="When Marketing reports <strong>12,000 prospects</strong>, Sales reports <strong>3,200</strong>, and CRM reports <strong>8,500</strong> — the Lens reveals why:" data-de="Wenn Marketing <strong>12.000 Interessenten</strong> meldet, Sales <strong>3.200</strong> und CRM <strong>8.500</strong> — zeigt die Linse warum:">
+                    When Marketing reports <strong>12,000 prospects</strong>, Sales reports <strong>3,200</strong>, and CRM reports <strong>8,500</strong> — the Lens reveals why:
+                </div>
+                
+                <div class="modal-table-container">
+                    <div class="modal-table-label" data-en="Apply the Lens" data-de="Die Linse anwenden">Apply the Lens</div>
+                    <table class="modal-table">
+                        <thead>
+                            <tr>
+                                <th data-en="Department" data-de="Abteilung">Department</th>
+                                <th data-en="Their &quot;Prospect&quot;" data-de="Ihr &quot;Interessent&quot;">Their "Prospect"</th>
+                                <th data-en="Layer" data-de="Ebene">Layer</th>
+                                <th data-en="Criteria" data-de="Kriterium">Criteria</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Marketing</strong></td>
+                                <td data-en="Ad engagers" data-de="Werbe-Interagierer">Ad engagers</td>
+                                <td><span class="layer-tag" style="background-color: #94D2BD;" data-en="Intuitive" data-de="Intuitiv">Intuitive</span></td>
+                                <td><span class="criteria-code" data-en="&quot;Showed interest&quot;" data-de="&quot;Hat Interesse gezeigt&quot;">"Showed interest"</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sales</strong></td>
+                                <td data-en="Hot leads" data-de="Heiße Leads">Hot leads</td>
+                                <td><span class="layer-tag" style="background-color: #0A9396; color: white;" data-en="Attribute" data-de="Merkmal">Attribute</span></td>
+                                <td><span class="criteria-code">callback_requested = TRUE</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>CRM</strong></td>
+                                <td data-en="Nurture pool" data-de="Nurture-Pool">Nurture pool</td>
+                                <td><span class="layer-tag" style="background-color: #0A9396; color: white;" data-en="Attribute" data-de="Merkmal">Attribute</span></td>
+                                <td><span class="criteria-code">newsletter = TRUE AND bookings = 0</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="modal-resolution">
+                    <div class="modal-resolution-label" data-en="The Resolution" data-de="Die Lösung">The Resolution</div>
+                    <div class="modal-resolution-text" data-en="All three are valid — they're just different lenses on the funnel. The Segmentation Lens <strong>makes the implicit explicit</strong>, turning vocabulary conflicts into structured alignment." data-de="Alle drei sind valide – sie nutzen nur unterschiedliche Linsen auf den Funnel. Die Segmentierungs-Linse <strong>macht das Implizite explizit</strong> und verwandelt Begriffskonflikte in strukturierte Abstimmung.">All three are valid — they're just different lenses on the funnel. The Segmentation Lens <strong>makes the implicit explicit</strong>, turning vocabulary conflicts into structured alignment.</div>
+                </div>
+            </div>
+        </div>
     </div>
     
     <script>
@@ -1073,159 +1353,39 @@ layout: null
         // Data
         const layers = {
             en: {
-                intuitive: {
-                    color: '#94D2BD',
-                    lightColor: '#E8F5F1',
-                    icon: '💬',
-                    name: 'Intuitive-Linguistic'
-                },
-                attribute: {
-                    color: '#0A9396',
-                    lightColor: '#E0F4F5',
-                    icon: '📊',
-                    name: 'Attribute-Based'
-                },
-                statistical: {
-                    color: '#005F73',
-                    lightColor: '#E6EEF0',
-                    icon: '🔬',
-                    name: 'Statistical-Analytical'
-                },
-                strategic: {
-                    color: '#7C3AED',
-                    lightColor: '#F3E8FF',
-                    icon: '🎯',
-                    name: 'Strategic'
-                },
-                theoretical: {
-                    color: '#001219',
-                    lightColor: '#E6E7E8',
-                    icon: '📚',
-                    name: 'Theoretical-Model-Based'
-                }
+                intuitive: { color: '#94D2BD', lightColor: '#E8F5F1', icon: '💬', name: 'Intuitive-Linguistic' },
+                attribute: { color: '#0A9396', lightColor: '#E0F4F5', icon: '📊', name: 'Attribute-Based' },
+                statistical: { color: '#005F73', lightColor: '#E6EEF0', icon: '🔬', name: 'Statistical-Analytical' },
+                strategic: { color: '#7C3AED', lightColor: '#F3E8FF', icon: '🎯', name: 'Strategic' },
+                theoretical: { color: '#001219', lightColor: '#E6E7E8', icon: '📚', name: 'Theoretical-Model-Based' }
             },
             de: {
-                intuitive: {
-                    color: '#94D2BD',
-                    lightColor: '#E8F5F1',
-                    icon: '💬',
-                    name: 'Intuitiv-Sprachlich'
-                },
-                attribute: {
-                    color: '#0A9396',
-                    lightColor: '#E0F4F5',
-                    icon: '📊',
-                    name: 'Merkmals-basiert'
-                },
-                statistical: {
-                    color: '#005F73',
-                    lightColor: '#E6EEF0',
-                    icon: '🔬',
-                    name: 'Statistisch-Analytisch'
-                },
-                strategic: {
-                    color: '#7C3AED',
-                    lightColor: '#F3E8FF',
-                    icon: '🎯',
-                    name: 'Strategisch'
-                },
-                theoretical: {
-                    color: '#001219',
-                    lightColor: '#E6E7E8',
-                    icon: '📚',
-                    name: 'Theoretisch-Modellbasiert'
-                }
+                intuitive: { color: '#94D2BD', lightColor: '#E8F5F1', icon: '💬', name: 'Intuitiv-Sprachlich' },
+                attribute: { color: '#0A9396', lightColor: '#E0F4F5', icon: '📊', name: 'Merkmals-basiert' },
+                statistical: { color: '#005F73', lightColor: '#E6EEF0', icon: '🔬', name: 'Statistisch-Analytisch' },
+                strategic: { color: '#7C3AED', lightColor: '#F3E8FF', icon: '🎯', name: 'Strategisch' },
+                theoretical: { color: '#001219', lightColor: '#E6E7E8', icon: '📚', name: 'Theoretisch-Modellbasiert' }
             }
         };
         
         const storySteps = {
             en: [
-                {
-                    icon: '🚢',
-                    title: 'The Starting Point',
-                    text: '1,599 people want to board your cruise ship. Ask 5 departments who these people are – you\'ll get 5 answers.',
-                    highlight: null
-                },
-                {
-                    icon: '📢',
-                    title: 'Marketing & Media',
-                    text: '"We target families, couples, and best agers – they immediately understand if they\'re meant."',
-                    highlight: 'intuitive'
-                },
-                {
-                    icon: '💻',
-                    title: 'CRM & E-Commerce',
-                    text: '"For us what counts is: Booking value over €1,000 = Premium segment. We can filter that in the system and target them specifically."',
-                    highlight: 'attribute'
-                },
-                {
-                    icon: '📊',
-                    title: 'Revenue Management',
-                    text: '"The algorithm finds 6 clusters with significantly different booking behavior."',
-                    highlight: 'statistical'
-                },
-                {
-                    icon: '🎯',
-                    title: 'Strategy',
-                    text: '"New customers are everyone who has only booked once – we need to specifically develop them toward a second booking."',
-                    highlight: 'strategic'
-                },
-                {
-                    icon: '🎓',
-                    title: 'Market Research',
-                    text: '"These groups correspond to the RFM segments from customer lifetime value research."',
-                    highlight: 'theoretical'
-                },
-                {
-                    icon: '💡',
-                    title: 'The Core Message',
-                    text: 'Everyone is right. The problem is not WHO is right, but that we speak different languages and operate on different levels.',
-                    highlight: null
-                }
+                { icon: '🚢', title: 'The Starting Point', text: '1,599 people want to board your cruise ship. Ask 5 departments who these people are – you\'ll get 5 answers.', highlight: null },
+                { icon: '📢', title: 'Marketing & Media', text: '"We target families, couples, and best agers – they immediately understand if they\'re meant."', highlight: 'intuitive' },
+                { icon: '💻', title: 'CRM & E-Commerce', text: '"For us what counts is: Booking value over €1,000 = Premium segment. We can filter that in the system and target them specifically."', highlight: 'attribute' },
+                { icon: '📊', title: 'Revenue Management', text: '"The algorithm finds 6 clusters with significantly different booking behavior."', highlight: 'statistical' },
+                { icon: '🎯', title: 'Strategy', text: '"New customers are everyone who has only booked once – we need to specifically develop them toward a second booking."', highlight: 'strategic' },
+                { icon: '🎓', title: 'Market Research', text: '"These groups correspond to the RFM segments from customer lifetime value research."', highlight: 'theoretical' },
+                { icon: '💡', title: 'The Core Message', text: 'Everyone is right. The problem is not WHO is right, but that we speak different languages and operate on different levels.', highlight: null }
             ],
             de: [
-                {
-                    icon: '🚢',
-                    title: 'Die Ausgangslage',
-                    text: '1.599 Menschen wollen auf dein Kreuzfahrtschiff. Frag 5 Abteilungen, wer diese Menschen sind – du bekommst 5 Antworten.',
-                    highlight: null
-                },
-                {
-                    icon: '📢',
-                    title: 'Marketing & Media',
-                    text: '"Wir sprechen Familien, Paare und Best Ager an – die verstehen sofort, ob sie gemeint sind."',
-                    highlight: 'intuitive'
-                },
-                {
-                    icon: '💻',
-                    title: 'CRM & E-Commerce',
-                    text: '"Für uns zählt: Buchungswert über 1.000€ = Premium-Segment. Das können wir im System filtern und gezielt ansprechen."',
-                    highlight: 'attribute'
-                },
-                {
-                    icon: '📊',
-                    title: 'Revenue Management',
-                    text: '"Der Algorithmus findet 6 Cluster mit signifikant unterschiedlichem Buchungsverhalten."',
-                    highlight: 'statistical'
-                },
-                {
-                    icon: '🎯',
-                    title: 'Strategie',
-                    text: '"Neukunden sind alle, die erst einmal gebucht haben – die müssen wir gezielt zur Zweitbuchung entwickeln."',
-                    highlight: 'strategic'
-                },
-                {
-                    icon: '🎓',
-                    title: 'Marktforschung',
-                    text: '"Diese Gruppen entsprechen den RFM-Segmenten aus der Customer-Lifetime-Value-Forschung."',
-                    highlight: 'theoretical'
-                },
-                {
-                    icon: '💡',
-                    title: 'Die Kernbotschaft',
-                    text: 'Alle haben recht. Das Problem ist nicht WER recht hat sondern dass wir unterschiedliche Sprachen sprechen und dabei auf verschiedenen Ebenen.',
-                    highlight: null
-                }
+                { icon: '🚢', title: 'Die Ausgangslage', text: '1.599 Menschen wollen auf dein Kreuzfahrtschiff. Frag 5 Abteilungen, wer diese Menschen sind – du bekommst 5 Antworten.', highlight: null },
+                { icon: '📢', title: 'Marketing & Media', text: '"Wir sprechen Familien, Paare und Best Ager an – die verstehen sofort, ob sie gemeint sind."', highlight: 'intuitive' },
+                { icon: '💻', title: 'CRM & E-Commerce', text: '"Für uns zählt: Buchungswert über 1.000€ = Premium-Segment. Das können wir im System filtern und gezielt ansprechen."', highlight: 'attribute' },
+                { icon: '📊', title: 'Revenue Management', text: '"Der Algorithmus findet 6 Cluster mit signifikant unterschiedlichem Buchungsverhalten."', highlight: 'statistical' },
+                { icon: '🎯', title: 'Strategie', text: '"Neukunden sind alle, die erst einmal gebucht haben – die müssen wir gezielt zur Zweitbuchung entwickeln."', highlight: 'strategic' },
+                { icon: '🎓', title: 'Marktforschung', text: '"Diese Gruppen entsprechen den RFM-Segmenten aus der Customer-Lifetime-Value-Forschung."', highlight: 'theoretical' },
+                { icon: '💡', title: 'Die Kernbotschaft', text: 'Alle haben recht. Das Problem ist nicht WER recht hat sondern dass wir unterschiedliche Sprachen sprechen und dabei auf verschiedenen Ebenen.', highlight: null }
             ]
         };
         
@@ -1235,27 +1395,15 @@ layout: null
         // Language switching
         function setLanguage(lang) {
             currentLang = lang;
-            
-            // Update button states
             document.getElementById('lang-en').classList.toggle('active', lang === 'en');
             document.getElementById('lang-de').classList.toggle('active', lang === 'de');
-            
-            // Update page title
             document.title = lang === 'en' ? 'The Segmentation Lens' : 'Die Segmentierungs-Linse';
             document.documentElement.lang = lang;
-            
-            // Update all translatable elements
             document.querySelectorAll('[data-en][data-de]').forEach(el => {
                 const text = el.getAttribute('data-' + lang);
-                if (text) {
-                    el.innerHTML = text;
-                }
+                if (text) el.innerHTML = text;
             });
-            
-            // Update story view
             updateStory();
-            
-            // Update next button text if on last step
             const nextBtn = document.getElementById('btn-next');
             if (currentStep === storySteps[currentLang].length - 1) {
                 nextBtn.innerHTML = lang === 'en' ? '📊 To Framework' : '📊 Zum Framework';
@@ -1266,7 +1414,7 @@ layout: null
         document.addEventListener('DOMContentLoaded', function() {
             renderProgressDots();
             updateStory();
-            setLanguage('en'); // Set English as default
+            setLanguage('en');
         });
         
         // View Toggle
@@ -1288,18 +1436,13 @@ layout: null
         function toggleLayer(layerId) {
             const allPanels = document.querySelectorAll('.detail-panel');
             const allCards = document.querySelectorAll('.layer-card');
-            
             if (activeLayer === layerId) {
-                // Close
                 document.getElementById('detail-' + layerId).classList.remove('visible');
                 document.getElementById('card-' + layerId).classList.remove('active');
                 activeLayer = null;
             } else {
-                // Close all first
                 allPanels.forEach(p => p.classList.remove('visible'));
                 allCards.forEach(c => c.classList.remove('active'));
-                
-                // Open selected
                 document.getElementById('detail-' + layerId).classList.add('visible');
                 document.getElementById('card-' + layerId).classList.add('active');
                 activeLayer = layerId;
@@ -1323,41 +1466,25 @@ layout: null
             const steps = storySteps[currentLang];
             const layerData = layers[currentLang];
             const step = steps[currentStep];
-            
             document.getElementById('story-icon').textContent = step.icon;
             document.getElementById('story-title').textContent = step.title;
             document.getElementById('story-text').textContent = step.text;
-            
-            // Update dots
             const dots = document.querySelectorAll('.progress-dot');
-            dots.forEach((dot, idx) => {
-                dot.classList.toggle('active', idx === currentStep);
-            });
-            
-            // Update buttons
+            dots.forEach((dot, idx) => dot.classList.toggle('active', idx === currentStep));
             document.getElementById('btn-prev').disabled = currentStep === 0;
             const nextBtn = document.getElementById('btn-next');
             if (currentStep === steps.length - 1) {
                 nextBtn.innerHTML = currentLang === 'en' ? '📊 To Framework' : '📊 Zum Framework';
-                nextBtn.disabled = false;
             } else {
                 nextBtn.innerHTML = currentLang === 'en' ? '<span data-en="Next" data-de="Weiter">Next</span> →' : '<span data-en="Next" data-de="Weiter">Weiter</span> →';
-                nextBtn.disabled = false;
             }
-            
-            // Update highlight
             const highlightEl = document.getElementById('story-highlight');
             if (step.highlight && layerData[step.highlight]) {
                 const layer = layerData[step.highlight];
                 highlightEl.style.display = 'block';
                 highlightEl.style.backgroundColor = layer.lightColor;
                 highlightEl.style.borderColor = layer.color;
-                highlightEl.innerHTML = `
-                    <div class="highlight-header">
-                        <span class="highlight-icon">${layer.icon}</span>
-                        <strong class="highlight-name" style="color: ${layer.color}">${layer.name}</strong>
-                    </div>
-                `;
+                highlightEl.innerHTML = `<div class="highlight-header"><span class="highlight-icon">${layer.icon}</span><strong class="highlight-name" style="color: ${layer.color}">${layer.name}</strong></div>`;
             } else {
                 highlightEl.style.display = 'none';
             }
@@ -1369,7 +1496,6 @@ layout: null
                 currentStep++;
                 updateStory();
             } else {
-                // Last step: go to framework
                 showFramework();
                 currentStep = 0;
                 updateStory();
@@ -1387,6 +1513,25 @@ layout: null
             currentStep = idx;
             updateStory();
         }
+
+        // Modal functions
+        function openModal() {
+            document.getElementById('lens-modal').classList.add('visible');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('lens-modal').classList.remove('visible');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('click', function(e) {
+            if (e.target.id === 'lens-modal') closeModal();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
     </script>
 </body>
 </html>
