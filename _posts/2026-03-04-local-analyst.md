@@ -87,8 +87,45 @@ Since the Buzzword AI is a must these days, I naturally wanted to cover this as 
   <li><strong>Ollama — server required</strong> — if you already run Ollama locally, point the tool at it and use any model you have installed.</li>
 </ul>
 
-![AI settings](/img/posts/ai_local_agent/preview4.webp)
+<img src="/img/posts/ai_local_agent/preview4.webp" alt="AI settings" style="max-width: 340px;">
 *Switch interpretation mode in the sidebar — rule-based, local LLM, or Ollama.*
+
+<br>
+
+### Keeping the AI Grounded: Preventing Hallucinations and Inconsistent Answers
+
+One of the trickier parts of working with local LLMs is that small models will happily invent numbers, contradict themselves between runs, or give you a completely different interpretation of the same chart depending on the day. Since the whole point of this tool is to help people trust their data, that was not acceptable.
+
+A few things that made a real difference:
+
+**Temperature set low (0.1–0.2).** Temperature controls how "creative" the model is. A high temperature makes responses more varied and unpredictable — great for writing poetry, terrible for interpreting a Spearman correlation. Setting it close to zero forces the model to be consistent and stick to the most probable, factual answer.
+
+``` python
+response = llm(
+    prompt,
+    max_tokens=512,
+    temperature=0.1,     # low = deterministic, factual
+    repeat_penalty=1.15  # discourages the model from looping or padding
+)
+```
+
+**The actual numbers go into the prompt.** The model never sees just "analyze this chart." It receives the computed statistics directly — the actual values, sample sizes, p-values — so it has nothing to hallucinate. It is asked to interpret numbers that already exist, not to generate them.
+
+``` python
+prompt = f"""You are a data analyst. Interpret the following results concisely.
+
+Analysis type: {analysis_type}
+Key findings: {json.dumps(results_summary)}
+
+Provide a 3–5 sentence plain-English interpretation. 
+Do not invent numbers. Only refer to the values provided above."""
+```
+
+**A strict system prompt.** The model is told exactly what it is, what it should do, and what it is not allowed to do. No freeform storytelling, no invented context, no speculative conclusions. It is an interpreter of provided numbers, nothing more.
+
+**Rule-based output as a fallback and sanity check.** The rule-based mode runs in parallel and produces structured findings independently of the LLM. If you are ever unsure whether the AI interpretation is reliable, you can switch modes and compare. The numbers do not change — only the narrative layer does.
+
+None of this makes the AI perfect. Small models running on a CPU will still occasionally produce odd phrasings or overly cautious hedging. But for the use case — explaining what a correlation heatmap or an RFM segment means to a non-technical person — it is more than good enough, and it stays honest about what it knows.
 
 ---
 
