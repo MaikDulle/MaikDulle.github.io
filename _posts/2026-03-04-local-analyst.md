@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "I Built a Local AI Analyst So My Colleagues Don't Have to Email Me Anymore"
+title: "I Built a Local AI Analyst So My Colleagues can Translate Data into Insights"
 subtitle: "How I turned 'can you quickly look at this CSV?' into a one-click self-service tool — fully offline, surprisingly powerful, and shamelessly over-engineered."
 author: Dr. Maik Dulle
 date: 2026-03-04
@@ -9,24 +9,24 @@ background: '/img/posts/ai_local_agent/header_ai_agent.png'
 
 ## Note: I am not a professional developer. Use at your own risk and be ethical about data usage.
 
-Picture this: your Head of Marketing has a CSV. She wants to know which customer segment drives the most revenue. She is not a data scientist. Your calendar is already blocked. And the answer she needs is sitting right there in her file, completely inaccessible to her.
+Picture this: your Head of Marketing has a CSV. She wants to know if any anomalies are in the data of last year. She is not a data scientist or analyst. Your calendar is already blocked. And the answer she needs is sitting right there in her file, completely inaccessible to her.
 
 This is the gap I wanted to close. Not by hiring more analysts, not by buying another BI subscription — but by giving non-technical people a tool that **translates raw data into actual insights**, locally, privately, without a single line of code on their end. The bottleneck in most organizations isn't data. It's the distance between data and the person who needs to act on it.
 
-Local Analyst is built for the manager who got handed a spreadsheet, the marketing practitioner running a campaign, the strategy consultant trying to make sense of a client's export — anyone who needs *insight, not infrastructure*.
+Local Analyst is built for the manager who got handed a spreadsheet, the marketing practitioner running a campaign, the strategy consultant trying to make sense of a client's export — anyone who has a bunch of data but needs *insight*.
 
 <br>
 
 ## The Idea: Analytics as a Vending Machine
 
-The core concept was almost embarrassingly simple: make statistical analysis as frictionless as possible for people who aren't data scientists. No Python installs for the end-user, no API keys, no "just connect your BigQuery account real quick." You drop a file in, you get analysis out.
+The core concept was almost embarrassingly simple: make statistical analysis as frictionless as possible for people who aren't data scientists/analysts. No Python installs for the end-user, no API keys, no "just connect your account real quick." You drop a file in, you get analysis out.
 
-But here's where it gets interesting — I didn't want to build yet another "pretty charts" tool. Real analysts need real stats. So Local Analyst covers the full spectrum: **RFM segmentation, A/B significance testing, cohort analysis, multi-touch attribution, funnel drop-off, anomaly detection** — all from a single upload across 12 analysis modules. The Full Scan runs all of them at once and returns a prioritized list of findings with severity ratings.
+But here's where it gets interesting — I didn't want to build yet another "pretty charts" tool. Real analysts need real stats. So THIS Local Analyst covers the full spectrum: **A/B significance testing, correlations, segmentations, cohort analysis, multi-touch attribution, funnel drop-off, anomaly detection** — all from a single upload across 12 analysis modules. The Full Scan runs all of them at once and returns a prioritized list of findings with severity ratings.
 
 ![Analysis window](/img/posts/ai_local_agent/preview5.webp)
 *12 analysis modules — one click each. Results appear immediately below the button, no configuration needed.*
 
-You upload. You click Analyze. You read the result. That's the whole product.
+You upload. You click *Analyze*. You read the result. That's the whole product.
 
 <br>
 
@@ -79,7 +79,7 @@ Local_analyst/
 
 ## The AI Layer: Interpretation Without the Cloud
 
-Once you have your analysis results, you can go one step further: hit **"Get AI Interpretation"** and get a plain-English explanation of what the numbers actually mean. No jargon, no follow-up meeting required. The tool offers three modes, switchable in the sidebar at any time:
+Since the Buzzword AI is a must these days, I naturally wanted to cover this as well. Once you have your analysis results, you can go one step further: hit **"Get AI Interpretation"** and get a plain-English explanation of what the numbers actually mean. No jargon, no follow-up meeting required. The tool offers three modes, switchable in the sidebar at any time:
 
 <ul>
   <li><strong>Rule-based (always available)</strong> — pre-written logic that spots patterns and surfaces them as readable findings. Zero dependencies, instant results. Always works.</li>
@@ -96,7 +96,7 @@ Once you have your analysis results, you can go one step further: hit **"Get AI 
 
 ## Data Quality First
 
-Most self-service tools will cheerfully visualize a five-row sample and let you draw conclusions from it. Local Analyst checks the dataset before running anything and flags problems with severity indicators. Four rows? Critical warning before any analysis runs. Bad input should never produce confident output.
+Most self-service tools will cheerfully visualize a five-row sample and let you draw conclusions from it. Pretty plots - yeah! My Local Analyst checks the dataset before running anything and flags problems with severity indicators. Four rows? Critical warning before any analysis runs. Bad input should never produce confident output.
 
 ![Data quality indicators](/img/posts/ai_local_agent/preview6.webp)
 *Hard stops for datasets too small or too broken to analyze reliably.*
@@ -151,14 +151,8 @@ Getting `llama-cpp-python` to install reliably across Windows, Mac, and Linux wi
 
 ---
 
-<br>
+The project is fully open source, MIT licensed, and documented well enough for a non-developer to install (I hope). Takes about 10 minutes from zero to running your first analysis. All files stay on your machine, always.
 
-> *"Trust the numbers, question the narrative."* — the last line of the README, and probably a decent life philosophy too.
-
-<br>
-
-That's a wrap for this post. The project is fully open source, MIT licensed, and documented well enough for a non-developer to install. Takes about 10 minutes from zero to running your first analysis. All files stay on your machine, always.
-
-If it saves even one person from forwarding their CSV to a cloud tool they don't fully trust — or from emailing their data analyst at 4pm on a Thursday — I'll count it as a win. Try it yourself and happy experimenting! :)
+If it saves even one person from forwarding their CSV to a cloud tool they don't fully trust — or from emailing their data analyst at 4pm on a Friday — I'll count it as a win. Thats a wrap for this post. Try it yourself and happy experimenting! :)
 
 👉 **[github.com/MaikDulle/Local_analyst](https://github.com/MaikDulle/Local_analyst)**
