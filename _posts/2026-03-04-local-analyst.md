@@ -32,17 +32,17 @@ You upload. You click *Analyze*. You read the result. That's the whole product.
 
 After uploading, the tool auto-detects which column is your date, revenue, customer ID and so on. You can correct it in two clicks if it guesses wrong — this is what unlocks the more specific analysis modules.
 
-![Upload screen](/img/posts/ai_local_agent/preview1.webp)
+<img src="/img/posts/ai_local_agent/preview1.webp" alt="Upload screen" style="max-width: 340px;"><br>
 *Drag and drop any file format — CSV, Excel, JSON, PDF, PowerPoint, Word. The tool reads it and shows a preview immediately.*
 
-![Column mapping](/img/posts/ai_local_agent/preview2.webp)
+<img src="/img/posts/ai_local_agent/preview2.webp" alt="Column mapping" style="max-width: 340px;"><br>
 *Auto-detected column mapping. Correct in two clicks if needed.*
 
 <br>
 
 There is also a filter panel and direct CSV/Excel export — so if someone just needs to slice a dataset and hand it off, they can do that without opening Python or bothering their analyst. One bonus use case that turned out to be surprisingly popular: upload a business PowerPoint full of messy tables and embedded charts, get a clean, standardized Excel back. No copy-pasting required.
 
-![Filter and export](/img/posts/ai_local_agent/preview3.webp)
+<img src="/img/posts/ai_local_agent/preview3.webp" alt="Filter and export" style="max-width: 340px;"><br>
 *Row filters + CSV/Excel export. Upload a messy PPTX, download a structured spreadsheet.*
 
 ---
@@ -87,7 +87,7 @@ Since the Buzzword AI is a must these days, I naturally wanted to cover this as 
   <li><strong>Ollama — server required</strong> — if you already run Ollama locally, point the tool at it and use any model you have installed.</li>
 </ul>
 
-<img src="/img/posts/ai_local_agent/preview4.webp" alt="AI settings" style="max-width: 340px;">
+<img src="/img/posts/ai_local_agent/preview4.webp" alt="AI settings" style="max-width: 340px;"><br>
 *Switch interpretation mode in the sidebar — rule-based, local LLM, or Ollama.*
 
 <br>
@@ -135,7 +135,7 @@ None of this makes the AI perfect. Small models running on a CPU will still occa
 
 Most self-service tools will cheerfully visualize a five-row sample and let you draw conclusions from it. Pretty plots - yeah! My Local Analyst checks the dataset before running anything and flags problems with severity indicators. Four rows? Critical warning before any analysis runs. Bad input should never produce confident output.
 
-![Data quality indicators](/img/posts/ai_local_agent/preview6.webp)
+<img src="/img/posts/ai_local_agent/preview6.webp" alt="Data quality indicators" style="max-width: 560px;"><br>
 *Hard stops for datasets too small or too broken to analyze reliably.*
 
 ---
