@@ -38,4 +38,4 @@ Hope you had as much fun with this post than I did generating the Segmentation L
 <br>
 
 And if you like to check it out, find it on my Gumroad:
-👉 **[The Segmentation Lens](hhttps://dullemaik.gumroad.com/l/bootjz)**
+👉 **[The Segmentation Lens](https://dullemaik.gumroad.com/l/bootjz)**
