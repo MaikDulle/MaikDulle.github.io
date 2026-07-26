@@ -47,8 +47,11 @@ But i do not want to be all negative. The thing I'm happiest with: every persona
 I ended up shipping two versions: the full app, and a lighter Claude Skill for people who'd rather it just live inside the Claude they already use. Almost everything that made the final product better came from something breaking first.
 
 Check out the **Board of Great Minds** on Gumroad and let me now what you think:
+
+<p>
+
 👉 **[Board_of_Great_Minds_App](https://dullemaik.gumroad.com/l/gblwad)**
 
-<br>
+<p>
 
 👉 **[Board_of_Great_Minds_Claude_Skill](https://dullemaik.gumroad.com/l/pgmihk)**
