@@ -3,8 +3,8 @@ layout: post
 title: "AI Project: The Borad of Great Minds"
 subtitle: "Of pitfalls and failure: What Broke While Building Board of Great Minds"
 author: Dr. Maik Dulle
-date: 2026-07-26
-background: 'img/posts/board_of_great_minds/boardgreatminds.png'
+date: 2026-07-25
+background: '/img/posts/board_of_great_minds/boardgreatminds.png'
 ---
 
 #### Note: All numeric values in this example are ficticious and serve for the purpose of illustration only. Use at your own risk. Be ethical about usage. Further, I am not a professional programmer/developer.
@@ -47,5 +47,8 @@ But i do not want to be all negative. The thing I'm happiest with: every persona
 I ended up shipping two versions: the full app, and a lighter Claude Skill for people who'd rather it just live inside the Claude they already use. Almost everything that made the final product better came from something breaking first.
 
 Check out the **Board of Great Minds** on Gumroad and let me now what you think:
-👉 APP **[Board_App](https://dullemaik.gumroad.com/l/gblwad)**
-👉 SKILL **[Board_Skill](https://dullemaik.gumroad.com/l/pgmihk)**
+👉 **[Board_of_Great_Minds_App](https://dullemaik.gumroad.com/l/gblwad)**
+
+<br>
+
+👉 **[Board_of_Great_Minds_Claude_Skill](https://dullemaik.gumroad.com/l/pgmihk)**
