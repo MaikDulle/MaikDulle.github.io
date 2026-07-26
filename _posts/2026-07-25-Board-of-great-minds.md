@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AI Project: The Borad of Great Minds"
-subtitle: "Of pitfalls and failure: What Broke While Building Board of Great Minds"
+subtitle: "Of pitfalls and failure: What Broke While Building a Board of Great Minds"
 author: Dr. Maik Dulle
 date: 2026-07-25
 background: '/img/posts/board_of_great_minds/boardgreatminds.png'
