@@ -9,8 +9,6 @@ background: '/img/posts/SegmFramework/20251220_1827_Fun Customer Segmentation_si
 
 ---
 
-## The Segmentation Lens: A Framework for Speaking the Same Language
-
 <br>
 
 ### Why 5 departments give 5 different answers – and how to tackle it
