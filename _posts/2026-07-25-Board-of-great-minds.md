@@ -48,10 +48,10 @@ I ended up shipping two versions: the full app, and a lighter Claude Skill for p
 
 Check out the **Board of Great Minds** on Gumroad and let me now what you think:
 
-<p>
+<br>
 
 👉 **[Board_of_Great_Minds_App](https://dullemaik.gumroad.com/l/gblwad)**
 
-<p>
+<br>
 
 👉 **[Board_of_Great_Minds_Claude_Skill](https://dullemaik.gumroad.com/l/pgmihk)**
