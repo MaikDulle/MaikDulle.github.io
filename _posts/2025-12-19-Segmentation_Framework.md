@@ -36,3 +36,8 @@ The art isn't in choosing one layer. It's knowing when which lens delivers the g
 </iframe>
 
 Hope you had as much fun with this post than I did generating the Segmentation Lens :)
+
+<br>
+
+And if you like to check it out, find it on my Gumroad:
+👉 The Segmentation Lens **[Lens](hhttps://dullemaik.gumroad.com/l/bootjz)**
