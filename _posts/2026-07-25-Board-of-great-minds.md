@@ -13,7 +13,10 @@ background: '/img/posts/board_of_great_minds/boardgreatminds.png'
 
 ## What Broke While Building Board of Great Minds
 
-I built a chat app where you can ask history's sharpest minds a question instead of getting one generic AI answer. Building it, testing everything myself end to end, a bunch of things broke in ways I didn't expect. Here's what went wrong, and what I learned.
+I built a chat app (usage via CLaude API) where you can ask history's sharpest minds a question instead of getting one generic AI answer. Building it, testing everything myself end to end, a bunch of things broke in ways I didn't expect. Here's what went wrong, and what I learned.
+
+<img src="/img/posts/board_of_great_minds/Screenshot 2026-10-30 210458.png" alt="BOGM_Home" style="max-width: 340px;"><br>
+*Starting Screen of the application*
 
 **1. The persona I wanted most, I couldn't build.**
 My first plan had Elon Musk, Steve Jobs, MrBeast, and Warren Buffett as personas. Then I thought it through: putting made-up opinions in a real person's mouth and selling it is a bad idea, legally and otherwise. So instead I built fictional "archetypes," like The First-Principles Builder and The Perfectionist. Openly fictional, but honest about who inspired each one. The same problem came up again with a negotiation persona I wanted to base on Harvey Specter from Suits. Different reason this time (he's a copyrighted character, not a real person), same fix.
