@@ -4,7 +4,7 @@ title: "AI Project: The Trade Counsil"
 subtitle: "Analyst, Trader, Risk Officer: what an AI stock desk taught me about making decisions"
 author: Dr. Maik Dulle
 date: 2026-11-17
-background: '/img/posts/thetradecounsil/tbd.png'
+background: '/img/posts/thetradecounsil/header.jpg'
 ---
 
 #### Note: All numeric values in this example are ficticious and serve for the purpose of illustration only. Use at your own risk. Be ethical about usage. Further, I am not a professional programmer/developer.
@@ -17,7 +17,7 @@ As a data analyst, I work with data every day, and most of that work and insight
 
 It's called Trade Council. You give it a stock idea and three AI perspectives look at and evaluate it. An analyst checks the numbers. A trader checks the timing. A risk officer asks what could go wrong and what it would cost you. They often disagree, and the app shows the disagreement instead of hiding it in an average.
 
-![Trade Council](images/cover.png)
+![Trade Council](/img/posts/thetradecounsil/cover.png)
 
 The part I find interesting is the decision process. A few habits from data science fit it better than I expected.
 
@@ -29,13 +29,13 @@ In an A/B test you fix the success metric before the test runs. If you don't, yo
 
 Every plan starts with the stop, the price at which you admit you were wrong, and the loss in euros if it gets hit. The amount you invest is calculated from that. The sidebar shows how a trade fits into the budget you set yourself, and the loss limit per trade scales with that budget.
 
-![The money sidebar](images/your-money.png)
+![The money sidebar](/img/posts/thetradecounsil/your-money.png)
 
 ## A "wait" needs a plan too
 
 Most models I build end in a score or an estimate. Those are quite easy to interpret, the hard part is what people do with a "not yet". Here every "wait" comes with a watch card: which price alerts to set, when to look again, and what has to happen before buying. You check it on a few fixed dates and leave the chart alone in between (no cherry-picking).
 
-![A watch card, in German and dark mode](images/watch-card-de-dark.png)
+![A watch card, in German and dark mode](/img/posts/thetradecounsil/watch-card-de-dark.png)
 
 ## Judge the process, not only the outcome
 
@@ -47,6 +47,6 @@ It's a learning project. The analysis comes from an AI model, it can be wrong, a
 
 The code is free on GitHub: one HTML file that runs in your browser with your own Claude API key, plus a Claude skill.
 
-[github.com//MaikDulle/Trade_Counsil](https://github.com//MaikDulle/Trade_Counsil)
+👉 **[github.com//MaikDulle/Trade_Counsil](https://github.com//MaikDulle/Trade_Counsil)**
 
 Thats a wrap for this post. Try it yourself and happy experimenting! :)
