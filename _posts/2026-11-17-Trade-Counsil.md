@@ -45,7 +45,7 @@ A good decision can lose money and a bad one can win. The journal records how co
 
 It's a learning project. The analysis comes from an AI model, it can be wrong, and it isn't financial advice. I mostly use it to slow down and to see the reasoning written out before I click buy.
 
-The code is free on GitHub: one HTML file that runs in your browser with your own Claude API key, plus a Claude skill.
+The code is free on GitHub: It is bilingual (EN + DE; see the screenshots), contains one HTML file that runs in your browser with your own Claude API key, plus a Claude skill.
 
 👉 **[github.com//MaikDulle/Trade_Counsil](https://github.com//MaikDulle/Trade_Counsil)**
 
